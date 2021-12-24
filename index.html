@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e06cf57877.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>News</title>
+</head>
+<body>
+    <!-- header start here -->
+    <header>
+        <nav class="nav-bar">
+            <div class="news-logo">
+                <h3>NEWS</h3>
+            </div>
+            <div class="navBar-menu">
+                <form action="#" id="home-form">
+                    <label for="search-input" class="sr-only">Search Here</label>
+                    <input type="text" class="search-input" id="search-input">
+                    <input type="submit" class="search-btn" id="search-btn" value="Search">
+                    <label for="news-category" class="sr-only"> Select News Category</label>
+                    <select name="Category" class="news-category" id="news-category">
+                        <!-- options will be here -->
+                    </select>
+                </form>
+                <!-- language dropdown menu will be here-->
+            </div>
+        </nav>
+    </header>
+    <!-- headre section end here -->
+
+    <!-- main section start here -->
+    <main>
+        <!-- search-output-section start here -->
+        <section>
+            <div>
+                <span><i class="fas fa-chevron-left"></i></span>
+            </div>
+            <div class="user-search-news-box" id="user-search-news">
+                <!-- news will appear here -->
+            </div>
+            <div>
+                <span><i class="fas fa-chevron-right"></i></span>
+            </div>
+        </section>
+        <!-- search-output-section end here -->
+
+        <!-- covid-cases-news-section start here -->
+        <section>
+            <!-- covid-19 current cases data and news will be print herer -->
+            <article>
+                <div>
+                    <div>
+                        <img src="./news-application-assets/Flag-Canada.jpeg" alt="Canada flag">
+                    </div>
+                    <div>
+                        <!-- covid-19 data will be here -->
+                    </div>
+                </div>
+            </article>
+            <article>
+                <!-- covid-news will be here -->
+            </article>
+        </section>
+        <!-- covid-cases-news-section end here -->
+
+        <!-- top-headline-section start here -->
+        <section>
+            <div>
+                <span><i class="fas fa-chevron-left"></i></span>
+            </div>
+            <div class="top-news-box" id="top-news">
+                <!-- all top headline will be here -->
+            </div>
+            <div>
+                <span><i class="fas fa-chevron-right"></i></span>
+            </div>
+        </section>
+        <!-- top-headline-section end here -->
+    </main>
+    <!-- main end here -->
+
+    <!-- footer section start here -->
+    <footer>
+        <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/">Juno College of
+                    Technology</a></span></p>
+    </footer>
+    <!-- footer section end here -->
+
+    <!-- js link -->
+    <script src="./app.js"></script>
+</body>
+</html>
