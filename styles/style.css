@@ -301,4 +301,66 @@ nav .navBar-menu input[type=submit] {
   margin-right: 5rem;
   background: #fff;
   height: 1.7rem;
+  cursor: pointer;
+}
+
+.user-input-search-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user-input-search-section .left-btn,
+.user-input-search-section .right-btn {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 1rem;
+  color: #e60505;
+  cursor: pointer;
+  height: 400px;
+  -webkit-transform: translateY(45%);
+          transform: translateY(45%);
+}
+.user-input-search-section .user-search-news-box {
+  overflow-x: hidden;
+}
+.user-input-search-section .user-search-news-box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.user-input-search-section .user-search-news-box ul li {
+  height: 400px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  -webkit-box-shadow: 0px 0px 7px #e60505;
+          box-shadow: 0px 0px 7px #e60505;
+  overflow-y: scroll;
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+}
+.user-input-search-section .user-search-news-box ul li h3 {
+  color: #e60505;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.user-input-search-section .user-search-news-box ul li div a {
+  text-decoration: none;
+  background-color: #e60505;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+}
+.user-input-search-section .user-search-news-box ul li p {
+  font: 1rem;
+}
+.user-input-search-section .user-search-news-box ul li img {
+  width: 100%;
 }
