@@ -1,4 +1,12 @@
-// user input search section
+//===============
+//  user input search section
+
+// userSearch out put styling
+.userSearch-outPut-Value{
+    margin: 1rem 0rem 0 5rem;
+    text-transform: capitalize;
+}
+
 .user-input-search-section{
     display: flex;
     align-items: center;
@@ -10,8 +18,9 @@
         margin: 1rem;
         color: $redColor;
         cursor: pointer;
-        height: 400px;
-        transform: translateY(45%);
+        // &:hover{
+        //     font-size: 3.2rem;
+        // }
     }    
     .user-search-news-box{ 
         overflow-x: hidden;
@@ -34,6 +43,7 @@
                     line-height: 1.2;
                     margin-bottom: 1rem;
                     font-size: 1rem;
+                    font-family: $primaryFont;
                 }
                 div a{
                     text-decoration: none;
@@ -42,10 +52,13 @@
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     padding: 0.5rem 0.75rem;
-                    font-size: 0.75rem;                
+                    font-size: 0.75rem;  
+                    cursor: pointer;              
                 }
                 p{
                     font: 1rem;
+                    font-family: $designFont;
+                    letter-spacing: 1px;
                     
                 }
                 img{
