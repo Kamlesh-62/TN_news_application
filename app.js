@@ -2,49 +2,57 @@
 const newsApp = {}; 
 
 newsApp.init = () =>{
-    newsApp.userSearchGetNews("Canada");
-    newsApp.getUserSearch();
-    newsApp.scrollNewsSection();
+    // newsApp.userSearchGetNews("Canada");
+    // newsApp.getUserSearch();
+    // newsApp.scrollNewsSection();
+   
 }
 
+// ================
+// global functions are here
 // create empty array, to fill data with image only and ignore data without image
+
 newsApp.filteredData = [];
 // create function which only return data which has a image ulr, otherwise ignore that data.
-newsApp.filterListOfArray = (arryData) => {
-    newsApp.filteredData = arryData.filter((listOfArray) => {
+newsApp.filterListOfArray = (arrayData) => {
+    newsApp.filteredData = arrayData.filter((listOfArray) => {
         return listOfArray = listOfArray.image !== "None";
     });
 }
 
 // left and right button functionality
 newsApp.scrollNewsSection = () => {
+    newsApp.newsWindow = document.querySelector('#user-search-news');
     newsApp.leftBtn = document.querySelector('.left-btn');
     newsApp.rightBtn = document.querySelector('.right-btn');
-    newsApp.newsWindow = document.querySelector('#user-search-news');
-
+    
     newsApp.leftBtn.addEventListener('click', () => {
-        newsApp.newsWindow.scrollLeft -= 250;
+        newsApp.newsWindow.scrollLeft -= 350;
     });
-
+    
     newsApp.rightBtn.addEventListener('click', () => {
-        newsApp.newsWindow.scrollLeft += 250;
+        newsApp.newsWindow.scrollLeft += 350;
     })
 }
 
+// ================
+// global functions are end here
 
+
+// following function for get data from API.
 newsApp.url = 'https://api.currentsapi.services/v1/';
 
 newsApp.userSearchGetNews = (userInput) =>{
-
-const url = new URL('https://api.currentsapi.services/v1/search');
-
-url.search = new URLSearchParams({
-    apiKey: 'Kt9jlerS23m4XmNMBGn8BajZA7NdUlj6qsEjoyPfhzsBbQ6T',
-    language: "en",
-    keywords: userInput
-});
-
-fetch(url)
+    
+    const url = new URL('https://api.currentsapi.services/v1/search');
+    
+    url.search = new URLSearchParams({
+        apiKey: 'VpaSlI0YYaZk22ge-D1h3V7o9BJAWxOC0J0AOg2fwQAqIS9L',
+        language: "en",
+        keywords: userInput
+    });
+    
+    fetch(url)
     .then((response) => {
         return response.json();
     })
@@ -54,11 +62,13 @@ fetch(url)
     });
 }
 
+
+
 // create function which will print data on website......
-newsApp.printUserSearchData = (arryData) =>{
+newsApp.printUserSearchData = (arrayData) =>{
     newsApp.ulElement = document.querySelector('.listOfUserSearchNews');
     newsApp.ulElement.innerHTML = "";
-    arryData.forEach((listOfArray) => {
+    arrayData.forEach((listOfArray) => {
         
         newsApp.listElement = document.createElement('li');
         newsApp.headerElement = document.createElement('h3');
@@ -75,8 +85,6 @@ newsApp.printUserSearchData = (arryData) =>{
         newsApp.anchorElement.innerHTML = `Read More`;
         newsApp.anchorElement.target = '_blank'; 
         
-        
-        
         newsApp.ulElement.appendChild(newsApp.listElement);
         newsApp.divElement.appendChild(newsApp.anchorElement);
         newsApp.listElement.append(newsApp.headerElement, newsApp.imgElement, newsApp.paragraphElement, newsApp.divElement); 
@@ -92,9 +100,12 @@ newsApp.getUserSearch = () => {
     const searchOutPutValue = document.querySelector('.userSearch-outPut-Value');
     form.addEventListener('submit', (event) => {
         const searchInput = document.querySelector('.search-input').value;
+        searchInput.value = "";
         newsApp.userSearchGetNews( searchInput);
         searchOutPutValue.innerHTML = searchInput;
         event.preventDefault();
     })    
 }
+
+
 newsApp.init();

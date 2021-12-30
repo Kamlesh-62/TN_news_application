@@ -19,7 +19,7 @@ html{
     // overflow-x: hidden;
 }
 .wrapper{
-    max-width: 1100px;
+    max-width: 1400px;
     width: 90%;
     margin: 0 auto;
 }
@@ -34,4 +34,8 @@ h1,h2,h3,h4,h5{
     font-family: $designFont;
     letter-spacing: 2px;
     margin: 0;
+}
+p,li, a {
+    font-family: $primaryFont;
+    content: red;
 }

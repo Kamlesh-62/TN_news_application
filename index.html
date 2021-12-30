@@ -41,12 +41,12 @@
     <main>
         <!-- search-input-section start here -->
         <section>
-            <h3 class="userSearch-outPut-Value"></h3>
+            <h3 class="userSearch-outPut-Value">"Search"</h3>
             <div class="user-input-search-section">
                 <div class="left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
                 </div>
-                <div class="user-search-news-box" id="user-search-news">
+                <div class="user-search-news-box wrapper" id="user-search-news">
                     <ul class="listOfUserSearchNews">
 
                     </ul>
@@ -56,37 +56,44 @@
                 </div>
             </div>
         </section>
+        <div class="section-divider"></div>
         <!-- search-output-section end here -->
-        <a href=""></a>
-
+        
         <!-- covid-cases-news-section start here -->
-        <section>
+        <section class="wrapper covid-19-section">
             <!-- covid-19 current cases data and news will be print herer -->
-            <article>
-                <div>
-                    <div>
-                        <img src="./news-application-assets/Flag-Canada.jpeg" alt="Canada flag">
+            <article class="covid-cases">
+                <h2>Covid-19</h2>
+                <div class="covid-data">
+                    <div class="canada-header-img">
+                        <h3>Canada COVID-19 Data</h3>
+                        <img src="./TN-assets/Flag-Canada.jpeg" alt="Canada flag">
                     </div>
-                    <div>
+                    <div class="covid-cases-data">
                         <!-- covid-19 data will be here -->
+                        
                     </div>
                 </div>
             </article>
-            <article>
-                <!-- covid-news will be here -->
+            <article class="covid-news">
+                <div id="listOfCovidNews">
+                    <ul class="listOfCovidNews">
+                    </ul>
+                </div>
             </article>
         </section>
         <!-- covid-cases-news-section end here -->
+        <div class="section-divider"></div>
 
         <!-- top-headline-section start here -->
-        <section>
-            <div>
+        <section class="news-category">
+            <div class="category-left-btn">
                 <span><i class="fas fa-chevron-left"></i></span>
             </div>
             <div class="top-news-box" id="top-news">
                 <!-- all top headline will be here -->
             </div>
-            <div>
+            <div class="category-right-btn">
                 <span><i class="fas fa-chevron-right"></i></span>
             </div>
         </section>
@@ -103,6 +110,7 @@
 
     <!-- js link -->
     <script src="./app.js"></script>
+    <script src="./covidApp.js"></script>
 </body>
 
 </html>

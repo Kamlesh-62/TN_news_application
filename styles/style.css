@@ -244,7 +244,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1400px;
   width: 90%;
   margin: 0 auto;
 }
@@ -262,6 +262,11 @@ h1, h2, h3, h4, h5 {
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
   margin: 0;
+}
+
+p, li, a {
+  font-family: "Open Sans", sans-serif;
+  content: red;
 }
 
 nav {
@@ -370,4 +375,140 @@ nav .navBar-menu input[type=submit] {
 }
 .user-input-search-section .user-search-news-box ul li img {
   width: 100%;
+}
+
+.covid-cases {
+  width: 55%;
+}
+
+.covid-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0px 0px 7px #e60505;
+          box-shadow: 0px 0px 7px #e60505;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+.covid-data .canada-header-img {
+  width: 80%;
+}
+.covid-data .canada-header-img h3 {
+  width: 80%;
+}
+.covid-data .canada-header-img img {
+  width: 50%;
+  margin-top: 1rem;
+}
+.covid-data .covid-cases-data {
+  width: 100%;
+}
+.covid-data .covid-cases-data ul li {
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: 700;
+}
+.covid-data .covid-cases-data ul li span {
+  color: #e60505;
+  text-align: right;
+  width: 100%;
+  font-weight: 500;
+}
+
+.covid-19-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+.covid-19-section .covid-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  margin-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.covid-19-section .covid-news .covid-left-btn,
+.covid-19-section .covid-news .covid-right-btn {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #e60505;
+  cursor: pointer;
+}
+.covid-19-section .covid-news #listOfCovidNews {
+  overflow-x: scroll;
+}
+.covid-19-section .covid-news #listOfCovidNews ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.covid-19-section .covid-news #listOfCovidNews ul li {
+  -webkit-box-shadow: 0px 0px 7px #e60505;
+          box-shadow: 0px 0px 7px #e60505;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 1rem;
+  margin: 1rem 2rem 0.5rem 0.5rem;
+}
+.covid-19-section .covid-news #listOfCovidNews ul li h3 {
+  color: #e60505;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.covid-19-section .covid-news #listOfCovidNews ul li div a {
+  text-decoration: none;
+  background-color: #e60505;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.covid-19-section .covid-news #listOfCovidNews ul li p {
+  font: 1rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+.covid-19-section .covid-news #listOfCovidNews ul li img {
+  width: 100%;
+}
+
+.section-divider {
+  height: 5px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0.9)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(255, 0, 0, 0.9)));
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(0, 0, 0, 0.5), rgba(255, 0, 0, 0.9));
+  margin-top: 1rem;
+  background-size: 150%;
+  -webkit-animation: moving 5s infinite alternate;
+          animation: moving 5s infinite alternate;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes moving {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }

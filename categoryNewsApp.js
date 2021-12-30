@@ -1,0 +1,5 @@
+const categoryApp = {};
+
+categoryApp.init = () => {
+
+}
