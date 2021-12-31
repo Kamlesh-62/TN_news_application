@@ -7,12 +7,15 @@
     text-transform: capitalize;
 }
 
-.user-input-search-section{
+.user-input-search-section,
+.news-category{
     display: flex;
     align-items: center;
 
     .left-btn,
-    .right-btn{
+    .right-btn,
+    .category-left-btn,
+    .category-right-btn{
         display: inline-block;
         font-size: 3rem;
         margin: 1rem;
@@ -24,7 +27,8 @@
         //     font-size: 3.2rem;
         // }
     }    
-    .user-search-news-box{ 
+    .user-search-news-box,
+    .categories-news-box{ 
         overflow-x: hidden;
         
         ul {

@@ -28,7 +28,7 @@
                     <input type="submit" class="search-btn" id="search-btn" value="Search">
                     <label for="news-category" class="sr-only"> Select News Category</label>
                     <select name="Category" class="news-category" id="news-category">
-                        <!-- options will be here -->
+                        <option value="Sports" selected>Select Category</option>
                     </select>
                 </form>
                 <!-- language dropdown menu will be here-->
@@ -58,7 +58,7 @@
         </section>
         <div class="section-divider"></div>
         <!-- search-output-section end here -->
-        
+
         <!-- covid-cases-news-section start here -->
         <section class="wrapper covid-19-section">
             <!-- covid-19 current cases data and news will be print herer -->
@@ -71,7 +71,7 @@
                     </div>
                     <div class="covid-cases-data">
                         <!-- covid-19 data will be here -->
-                        
+
                     </div>
                 </div>
             </article>
@@ -86,15 +86,21 @@
         <div class="section-divider"></div>
 
         <!-- top-headline-section start here -->
-        <section class="news-category">
-            <div class="category-left-btn">
-                <span><i class="fas fa-chevron-left"></i></span>
-            </div>
-            <div class="top-news-box" id="top-news">
-                <!-- all top headline will be here -->
-            </div>
-            <div class="category-right-btn">
-                <span><i class="fas fa-chevron-right"></i></span>
+        <section class="news-category-section">
+            <h2 class="category-title"> Sports</h2>
+            <div class="news-category">
+                <div class="category-left-btn">
+                    <span><i class="fas fa-chevron-left"></i></span>
+                </div>
+                <div class="categories-news-box" id="categories-news-box">
+                    <ul class="listOfCategoriesNews">
+
+                    </ul>
+                    <!-- all top headline will be here -->
+                </div>
+                <div class="category-right-btn">
+                    <span><i class="fas fa-chevron-right"></i></span>
+                </div>
             </div>
         </section>
         <!-- top-headline-section end here -->
@@ -111,6 +117,7 @@
     <!-- js link -->
     <script src="./app.js"></script>
     <script src="./covidApp.js"></script>
+    <script src="./categoryNewsApp.js"></script>
 </body>
 
 </html>

@@ -32,5 +32,14 @@ nav{
             height: 1.7rem;
             cursor: pointer;
         }
+        select{
+            border: 2px solid $blackColor;
+            color: black;
+            background-color: $whiteColor;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            padding: 0.2rem;
+        }
     }
 }

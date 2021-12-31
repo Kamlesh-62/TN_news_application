@@ -2,9 +2,9 @@
 const newsApp = {}; 
 
 newsApp.init = () =>{
-    // newsApp.userSearchGetNews("Canada");
-    // newsApp.getUserSearch();
-    // newsApp.scrollNewsSection();
+    newsApp.userSearchGetNews("Canada");
+    newsApp.getUserSearch();
+    newsApp.scrollNewsSection();
    
 }
 
@@ -100,7 +100,6 @@ newsApp.getUserSearch = () => {
     const searchOutPutValue = document.querySelector('.userSearch-outPut-Value');
     form.addEventListener('submit', (event) => {
         const searchInput = document.querySelector('.search-input').value;
-        searchInput.value = "";
         newsApp.userSearchGetNews( searchInput);
         searchOutPutValue.innerHTML = searchInput;
         event.preventDefault();

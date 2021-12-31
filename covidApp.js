@@ -97,6 +97,30 @@ covidApp.printCovidNews = (arrayData) => {
     });
 
 }
+
+
+covidApp.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // covidApp.covidLeftBtn = document.querySelector('.covid-left-btn');
 // covidApp.covidRightBtn = document.querySelector('.covid-right-btn');
 // covidApp.scrollingWindow = document.querySelector('#listOfCovidNews');
@@ -113,6 +137,3 @@ covidApp.printCovidNews = (arrayData) => {
 //     })
 // }
 // covidApp.scrollCovidNewssSection();
-
-
-covidApp.init();
