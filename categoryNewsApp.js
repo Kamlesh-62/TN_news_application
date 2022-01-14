@@ -6,14 +6,15 @@ categoryApp.init = () => {
     categoryApp.scrollNewsSection();
 }
 
+categoryApp.url = 'https://api.currentsapi.services/v1/';
 
 categoryApp.getCategoryData = () => {
-    const url = new URL('https://api.currentsapi.services/v1/available/categories');
+
+    const url = new URL(`${categoryApp.url}available/categories`);
 
     url.search = new URLSearchParams({
         apiKey: '2nSX705p_Cs9Dswp9q3a5tT5HwTXkTyFq6UdrhHSxVLO7Xbm',
         language: "en",
-        // category : "userChoiceCategory"
     });
 
     fetch(url)
@@ -27,16 +28,16 @@ categoryApp.getCategoryData = () => {
 }
 categoryApp.printCategoriesList  = (arrayData) => {
     arrayData.forEach((listOfCategories)=> {
-        categoryApp.selectElement = document.querySelector('.news-category');
-        categoryApp.optionElement = document.createElement('option');
+        const selectElement = document.querySelector('.news-category');
+        const optionElement = document.createElement('option');
 
-        categoryApp.optionElement.innerHTML  = `
+        optionElement.innerHTML  = `
         <option value="${listOfCategories}" selected>${listOfCategories}</option>
         `;
         // categoryApp.optionElement.innerHTML = listOfCategories;
         // categoryApp.optionElement.value = listOfCategories;
 
-        categoryApp.selectElement.append(categoryApp.optionElement)
+        selectElement.append(optionElement)
 
     })
 }
@@ -46,7 +47,7 @@ categoryApp.printCategoriesList  = (arrayData) => {
 // print  category news on website 
 categoryApp.getCategoryNewsData = (userChoiceCategory) => {
 
-        const url = new URL('https://api.currentsapi.services/v1/search');
+        const url = new URL(`${categoryApp.url}search`);
 
         url.search = new URLSearchParams({
             apiKey: 'VpaSlI0YYaZk22ge-D1h3V7o9BJAWxOC0J0AOg2fwQAqIS9L',
@@ -59,7 +60,7 @@ categoryApp.getCategoryNewsData = (userChoiceCategory) => {
                 return response.json();
             })
             .then((jsonResult) => {
-                console.log(jsonResult.news)
+                // console.log(jsonResult.news)
                 categoryApp.filterListOfArray(jsonResult.news)
                 categoryApp.printCategoriesNews(categoryApp.filteredData);
             });
@@ -76,57 +77,56 @@ categoryApp.filterListOfArray = (arrayData) => {
 
 // print data on wesite function
 categoryApp.printCategoriesNews = (arrayData) => {
-    categoryApp.ulElement = document.querySelector('.listOfCategoriesNews');
-    categoryApp.ulElement.innerHTML = "";
+    const ulElement = document.querySelector('.listOfCategoriesNews');
+    ulElement.innerHTML = "";
     arrayData.forEach((listOfArray) => {
+        const listElement = document.createElement('li');
+        const headerElement = document.createElement('h3');
+        const imgElement = document.createElement('img');
+        const paragraphElement = document.createElement('p');
+        const divElement = document.createElement('div');
+        const anchorElement = document.createElement('a');
         
-        categoryApp.listElement = document.createElement('li');
-        categoryApp.headerElement = document.createElement('h3');
-        categoryApp.imgElement = document.createElement('img');
-        categoryApp.paragraphElement = document.createElement('p');
-        categoryApp.divElement = document.createElement('div');
-        categoryApp.anchorElement = document.createElement('a');
+        headerElement.innerHTML = listOfArray.title;
+        imgElement.src = listOfArray.image;
+        imgElement.alt = listOfArray.title;
+        paragraphElement.innerHTML = listOfArray.description;
+        anchorElement.href = listOfArray.url;
+        anchorElement.innerHTML = `Read More`;
+        anchorElement.target = '_blank';
         
-        categoryApp.headerElement.innerHTML = listOfArray.title;
-        categoryApp.imgElement.src = listOfArray.image;
-        categoryApp.imgElement.alt = listOfArray.title;
-        categoryApp.paragraphElement.innerHTML = listOfArray.description;
-        categoryApp.anchorElement.href = listOfArray.url;
-        categoryApp.anchorElement.innerHTML = `Read More`;
-        categoryApp.anchorElement.target = '_blank';
-        
-        categoryApp.ulElement.appendChild(categoryApp.listElement);
-        categoryApp.divElement.appendChild(categoryApp.anchorElement);
-        categoryApp.listElement.append(categoryApp.headerElement, categoryApp.imgElement, categoryApp.paragraphElement, categoryApp.divElement);
+        ulElement.appendChild(listElement);
+        divElement.appendChild(anchorElement);
+        listElement.append(headerElement, imgElement, paragraphElement, divElement);
         
     })
 } 
-categoryApp.getCategoryNewsData("sports");
+// categoryApp.getCategoryNewsData("sports");
 
 categoryApp.selectCategories = () => {
-    const formElement = document.querySelector('#home-form');
-    categoryApp.categoryTitle = document.querySelector(".category-title");
+    const formElement = document.querySelector('select');
+    const categoryTitle = document.querySelector(".category-output");
     
     formElement.addEventListener("change", () =>{
-        categoryApp.selectedOption = document.querySelector("#news-category").value;
-        categoryApp.getCategoryNewsData(categoryApp.selectedOption);
-        categoryApp.categoryTitle.innerHTML = categoryApp.selectedOption;
-        console.log(categoryApp.categoryTitle);
+        const selectedOption = document.querySelector("#news-category").value;
+        categoryApp.getCategoryNewsData(selectedOption);
+        categoryTitle.innerHTML = selectedOption;
+        console.log(categoryTitle);
     })
 }
 
 categoryApp.scrollNewsSection = () => {
-    categoryApp.newsWindow = document.querySelector('#categories-news-box');
-    categoryApp.categoryLeftBtn = document.querySelector('.category-left-btn');
-    categoryApp.categoryRightBtn = document.querySelector('.category-right-btn');
+    const newsWindow = document.querySelector('#categories-news-box');
+    const categoryLeftBtn = document.querySelector('.category-left-btn');
+    const categoryRightBtn = document.querySelector('.category-right-btn');
 
-    categoryApp.categoryLeftBtn.addEventListener('click', () => {
-        categoryApp.newsWindow.scrollLeft -= 350;
+    categoryLeftBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft -= 350;
     });
 
-    categoryApp.categoryRightBtn.addEventListener('click', () => {
-        categoryApp.newsWindow.scrollLeft += 350;
+    categoryRightBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft += 350;
     })
 }
 
-categoryApp.init();
+// categoryApp.init();

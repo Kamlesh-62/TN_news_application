@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/e06cf57877.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
@@ -23,13 +23,15 @@
             </div>
             <div class="navBar-menu">
                 <form action="#" id="home-form">
-                    <label for="search-input" class="sr-only">Search Here</label>
-                    <input type="text" class="search-input" id="search-input">
-                    <input type="submit" class="search-btn" id="search-btn" value="Search">
-                    <label for="news-category" class="sr-only"> Select News Category</label>
-                    <select name="Category" class="news-category" id="news-category">
-                        <option value="Sports" selected>Select Category</option>
-                    </select>
+                    <div class="form-tag">
+                        <label for="search-input" class="sr-only">Search Here</label>
+                        <input type="text" class="search-input" id="search-input">
+                        <button class="search-btn ">Search</button>
+                        <label for="news-category" class="sr-only"> Select News Category</label>
+                        <select name="Category" class="news-category" id="news-category">
+                            <option value="Sports" selected>Select Category</option>
+                        </select>
+                    </div>
                 </form>
                 <!-- language dropdown menu will be here-->
             </div>
@@ -40,59 +42,48 @@
     <!-- main section start here -->
     <main>
         <!-- search-input-section start here -->
+        <div id='overlay' ></div>
+        <section class="news-letter " id="news-letter">
+            <h2 class="news-letter-heading">Join our newsletter</h2>
+            <p class="news-letter-info">For exclusive breaking news and Top news stories subscribe here  </p>
+            <form action="#" id="from">
+                <input type="email" id="email" class="email" placeholder="Email Address">
+                <label for="email" class="sr-only">Email</label>
+                <button class="btn submit-btn" type="submit"> Submit</button>
+            </form>
+            <div><i class="fas fa-question-circle help"></i></div>
+            <div><i class="fas fa-times time"></i></div>
+        </section>
         <section>
-            <h3 class="userSearch-outPut-Value">"Search"</h3>
+            <h3 class="userSearch-outPut-Value">"<span class="search-output">Search</span>"</h3>
             <div class="user-input-search-section">
                 <div class="left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
                 </div>
-                <div class="user-search-news-box wrapper" id="user-search-news">
+                <div class=" user-search-news-box" id="user-search-news">
                     <ul class="listOfUserSearchNews">
 
                     </ul>
+                    <div>
+                        <p id="error-msg" class="hide"> Invalid search Try again (eg: weather, bitcoin, tesla) </p>
+                    </div>
                 </div>
                 <div class="right-btn">
                     <span><i class="fas fa-chevron-right"></i></span>
                 </div>
             </div>
         </section>
-        <div class="section-divider"></div>
+        <!-- <div class="section-divider"></div> -->
         <!-- search-output-section end here -->
 
-        <!-- covid-cases-news-section start here -->
-        <section class="wrapper covid-19-section">
-            <!-- covid-19 current cases data and news will be print herer -->
-            <article class="covid-cases">
-                <h2>Covid-19</h2>
-                <div class="covid-data">
-                    <div class="canada-header-img">
-                        <h3>Canada COVID-19 Data</h3>
-                        <img src="./TN-assets/Flag-Canada.jpeg" alt="Canada flag">
-                    </div>
-                    <div class="covid-cases-data">
-                        <!-- covid-19 data will be here -->
-
-                    </div>
-                </div>
-            </article>
-            <article class="covid-news">
-                <div id="listOfCovidNews">
-                    <ul class="listOfCovidNews">
-                    </ul>
-                </div>
-            </article>
-        </section>
-        <!-- covid-cases-news-section end here -->
-        <div class="section-divider"></div>
-
-        <!-- top-headline-section start here -->
-        <section class="news-category-section">
-            <h2 class="category-title"> Sports</h2>
+        <!-- News-category-section start here -->
+        <section class="news-category-section" id="news-category">
+            <h3 class="category-title"> "<span class="category-output">Sports</span>" </h3>
             <div class="news-category">
                 <div class="category-left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
                 </div>
-                <div class="categories-news-box" id="categories-news-box">
+                <div class=" categories-news-box" id="categories-news-box">
                     <ul class="listOfCategoriesNews">
 
                     </ul>
@@ -103,12 +94,59 @@
                 </div>
             </div>
         </section>
-        <!-- top-headline-section end here -->
+        <!-- News-category-section end here -->
+
+        <!-- <div class="section-divider"></div> -->
+        <!-- covid-cases-news-section start here -->
+        <section class="covid-19-section">
+            <!-- covid-19 current cases data and news will be print herer -->
+            <article class="covid-cases">
+                <h2>Covid-19</h2>
+                <div class="covid-data">
+                    <div class="canada-header-img">
+                        <img src="./TN-assets/Flag-Canada.jpeg" alt="Canada flag">
+                    </div>
+                    <div class="covid-cases-data" id="covid-data">
+                        <h5>Canada COVID-19 Data</h5>
+                        <!-- covid-19 data will be here -->
+
+                    </div>
+                </div>
+            </article>
+            <article class="covid-news">
+                <div id="listOfCovidNews">
+                    <ul class="listOfCovidNews">
+                    </ul>
+                </div>
+                <small>Scroll Right to Read more</small>
+            </article>
+        </section>
+        <!-- covid-cases-news-section end here -->
     </main>
     <!-- main end here -->
 
     <!-- footer section start here -->
     <footer>
+        <div class=" wrapper footer-feature">
+            <nav class="footer-menu">
+                <ul>
+                    <li><a href="#home"> Home</a></li>
+                    <li><a href="#covid-data">Covid Data</a></li>
+                    <li><a href="#news-category">Category</a></li>
+                </ul>
+            </nav>
+            <div class="subscribtion-section">
+                <p>subscribe for daily news-letter
+                <p>
+                <form action="#">
+                    <input type="email" id="news-letter-email">
+                    <label for="news-letter-email" class="sr-only">Email for Daily news-letter</label>
+                    <!-- <small>Subscribe For Daily News Letter</small> -->
+                    <input type="submit" id="submit-btn-newsLetter" value="Submit">
+                    <label for="submit-btn-newsLetter" class="sr-only">Submit Button</label>
+                </form>
+            </div>
+        </div>
         <p class="footer-copyright">Copyright &copy; 2021 <span><a href="https://junocollege.com/">Juno College of
                     Technology</a></span></p>
     </footer>

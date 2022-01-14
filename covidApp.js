@@ -7,26 +7,28 @@ covidApp.init = () => {
     covidApp.getCovidNews();
 }
 
+
 covidApp.getCovidCases = () => {
 
     fetch('https://api.covid19api.com/summary')
         .then((response) => {
             return response.json();
+            console.log(response)
         })
         .then((jsonResult) => {
-            console.log(jsonResult.Countries);
+            // console.log(jsonResult.Countries);
             covidApp.printCountryCases(jsonResult.Countries);
         });
 }
 
 covidApp.printCountryCases = function (arrayOfData) {
-    covidApp.covidCaseData = document.querySelector('.covid-cases-data');
+    const covidCaseData = document.querySelector('.covid-cases-data');
     arrayOfData.forEach(function (listOfDataObject) {
-        covidApp.ulElement = document.createElement('ul');
+        const ulElement = document.createElement('ul');
         // newsApp.ulElement.classList.add("listOfCovidData");
 
         if (listOfDataObject.Country === 'Canada') {
-            covidApp.ulElement.innerHTML = ` 
+            ulElement.innerHTML = ` 
         <li>Country :  <span> ${listOfDataObject.Country}</span></li>
         <li>New Confirmed Cases : <span> ${listOfDataObject.NewConfirmed}</span></li>
         <li>New Deaths : <span> ${listOfDataObject.NewDeaths}</span></li>
@@ -34,7 +36,7 @@ covidApp.printCountryCases = function (arrayOfData) {
         <li>Total Confirmed : <span> ${listOfDataObject.TotalConfirmed}</span></li>
         `;
 
-            covidApp.covidCaseData.append(covidApp.ulElement);
+            covidCaseData.append(ulElement);
         }
     })
 }
@@ -56,7 +58,7 @@ covidApp.getCovidNews = () => {
             return response.json();
         })
         .then((jsonResult) => {
-            console.log(jsonResult.news);
+            // console.log(jsonResult.news);
             covidApp.filterListOfArray(jsonResult.news)
             covidApp.printCovidNews(covidApp.filteredData);
 
@@ -71,69 +73,32 @@ covidApp.filterListOfArray = (arrayData) => {
 } 
 
 covidApp.printCovidNews = (arrayData) => {
-    covidApp.newsUlElement = document.querySelector(".listOfCovidNews");
-    covidApp.newsUlElement.innerHtml = " ";
+    const newsUlElement = document.querySelector(".listOfCovidNews");
+    newsUlElement.innerHtml = " ";
 
     arrayData.forEach((listOfArray) => {
 
-        covidApp.listElement = document.createElement('li');
-        covidApp.headerElement = document.createElement('h3');
-        covidApp.imgElement = document.createElement('img');
-        covidApp.paragraphElement = document.createElement('p');
-        covidApp.divElement = document.createElement('div');
-        covidApp.anchorElement = document.createElement('a');
+        const listElement = document.createElement('li');
+        const headerElement = document.createElement('h3');
+        const imgElement = document.createElement('img');
+        const paragraphElement = document.createElement('p');
+        const divElement = document.createElement('div');
+        const anchorElement = document.createElement('a');
 
-        covidApp.headerElement.innerHTML = listOfArray.title;
-        covidApp.imgElement.src = listOfArray.image;
-        covidApp.imgElement.alt = listOfArray.title;
-        covidApp.paragraphElement.innerHTML = listOfArray.description;
-        covidApp.anchorElement.href = listOfArray.url;
-        covidApp.anchorElement.innerHTML = `Read More`;
-        covidApp.anchorElement.target = '_blank';
+        headerElement.innerHTML = listOfArray.title;
+        imgElement.src = listOfArray.image;
+        imgElement.alt = listOfArray.title;
+        paragraphElement.innerHTML = listOfArray.description;
+        anchorElement.href = listOfArray.url;
+        anchorElement.innerHTML = `Read More`;
+        anchorElement.target = '_blank';
 
-        covidApp.newsUlElement.appendChild(covidApp.listElement);
-        covidApp.divElement.appendChild(covidApp.anchorElement);
-        covidApp.listElement.append(covidApp.headerElement, covidApp.imgElement, covidApp.paragraphElement, covidApp.divElement);
+        newsUlElement.appendChild(listElement);
+        divElement.appendChild(anchorElement);
+        listElement.append(headerElement, imgElement, paragraphElement, divElement);
     });
 
 }
 
 
-covidApp.init();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// covidApp.covidLeftBtn = document.querySelector('.covid-left-btn');
-// covidApp.covidRightBtn = document.querySelector('.covid-right-btn');
-// covidApp.scrollingWindow = document.querySelector('#listOfCovidNews');
-
-// covidApp.scrollCovidNewssSection = () => {
-
-//     covidApp.covidLeftBtn.addEventListener('click', () => {
-//         covidApp.scrollingWindow.scrollLeft -= 500;
-//     });
-
-//     covidApp.covidRightBtn.addEventListener('click', (e) => {
-//         covidApp.scrollingWindow.scrollLeft += 500;
-//         console.log(e.target);
-//     })
-// }
-// covidApp.scrollCovidNewssSection();
+// covidApp.init();

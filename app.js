@@ -22,16 +22,16 @@ newsApp.filterListOfArray = (arrayData) => {
 
 // left and right button functionality
 newsApp.scrollNewsSection = () => {
-    newsApp.newsWindow = document.querySelector('#user-search-news');
-    newsApp.leftBtn = document.querySelector('.left-btn');
-    newsApp.rightBtn = document.querySelector('.right-btn');
+    const newsWindow = document.querySelector('#user-search-news');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
     
-    newsApp.leftBtn.addEventListener('click', () => {
-        newsApp.newsWindow.scrollLeft -= 350;
+    leftBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft -= 350;
     });
     
-    newsApp.rightBtn.addEventListener('click', () => {
-        newsApp.newsWindow.scrollLeft += 350;
+    rightBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft += 350;
     })
 }
 
@@ -44,7 +44,7 @@ newsApp.url = 'https://api.currentsapi.services/v1/';
 
 newsApp.userSearchGetNews = (userInput) =>{
     
-    const url = new URL('https://api.currentsapi.services/v1/search');
+    const url = new URL(`${newsApp.url}search`);
     
     url.search = new URLSearchParams({
         apiKey: 'VpaSlI0YYaZk22ge-D1h3V7o9BJAWxOC0J0AOg2fwQAqIS9L',
@@ -54,57 +54,84 @@ newsApp.userSearchGetNews = (userInput) =>{
     
     fetch(url)
     .then((response) => {
+        // console.log(response);
         return response.json();
+
     })
     .then((jsonResult) => {
+        // console.log(jsonResult.news);
         newsApp.filterListOfArray(jsonResult.news)
         newsApp.printUserSearchData(newsApp.filteredData);
+        newsApp.printErrorMsg (newsApp.filteredData);
     });
 }
 
+newsApp.printErrorMsg = (array) => {
+    const errorMsg = document.querySelector('#error-msg');
+    console.log(array.length);
+    if(array.length < 1){
+        errorMsg.classList.remove('hide');
+    }
+}
 
 
 // create function which will print data on website......
 newsApp.printUserSearchData = (arrayData) =>{
-    newsApp.ulElement = document.querySelector('.listOfUserSearchNews');
-    newsApp.ulElement.innerHTML = "";
+    const ulElement = document.querySelector('.listOfUserSearchNews');
+    ulElement.innerHTML = "";
     arrayData.forEach((listOfArray) => {
         
-        newsApp.listElement = document.createElement('li');
-        newsApp.headerElement = document.createElement('h3');
-        newsApp.imgElement = document.createElement('img');
-        newsApp.paragraphElement = document.createElement('p');
-        newsApp.divElement = document.createElement('div');
-        newsApp.anchorElement = document.createElement('a');
+        const listElement = document.createElement('li');
+        const headerElement = document.createElement('h3');
+        const imgElement = document.createElement('img');
+        const paragraphElement = document.createElement('p');
+        const divElement = document.createElement('div');
+        const anchorElement = document.createElement('a');
         
-        newsApp.headerElement.innerHTML = listOfArray.title;
-        newsApp.imgElement.src = listOfArray.image;
-        newsApp.imgElement.alt = listOfArray.title;
-        newsApp.paragraphElement.innerHTML = listOfArray.description;
-        newsApp.anchorElement.href = listOfArray.url;
-        newsApp.anchorElement.innerHTML = `Read More`;
-        newsApp.anchorElement.target = '_blank'; 
+        headerElement.innerHTML = listOfArray.title;
+        imgElement.src = listOfArray.image;
+        imgElement.alt = listOfArray.title;
+        paragraphElement.innerHTML = listOfArray.description;
+        anchorElement.href = listOfArray.url;
+        anchorElement.innerHTML = `Read More`;
+        anchorElement.target = '_blank'; 
         
-        newsApp.ulElement.appendChild(newsApp.listElement);
-        newsApp.divElement.appendChild(newsApp.anchorElement);
-        newsApp.listElement.append(newsApp.headerElement, newsApp.imgElement, newsApp.paragraphElement, newsApp.divElement); 
-        
+        ulElement.appendChild(listElement);
+        divElement.appendChild(anchorElement);
+        listElement.append(headerElement, imgElement, paragraphElement, divElement); 
     })
 } 
-
-
 
 // Event listener for user search input and get data accordingly user's choice....
 newsApp.getUserSearch = () => {
     const form = document.querySelector('#home-form');
-    const searchOutPutValue = document.querySelector('.userSearch-outPut-Value');
+    const searchOutPutValue = document.querySelector('.search-outPut');
     form.addEventListener('submit', (event) => {
         const searchInput = document.querySelector('.search-input').value;
-        newsApp.userSearchGetNews( searchInput);
+        newsApp.userSearchGetNews(searchInput);
         searchOutPutValue.innerHTML = searchInput;
         event.preventDefault();
     })    
 }
+// newsletter page 
 
+const newsLetterPage = document.querySelector('.news-letter');
+const overLay = document.querySelector('#overlay');
+const closeBtn = document.querySelector('.time');
 
-newsApp.init();
+setTimeout(() => {
+    newsLetterPage.classList.add('appear');
+    overLay.classList.add('show');
+    console.log('hey');
+}, 2000);
+
+newsApp.closeNewsLetterWindow = () => {
+
+    closeBtn.addEventListener('click' ,() => {
+        newsLetterPage.classList.remove('appear');
+        overLay.classList.remove('show');
+    })
+}
+newsApp.closeNewsLetterWindow();
+
+// newsApp.init();

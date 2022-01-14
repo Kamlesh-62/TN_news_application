@@ -1,10 +1,24 @@
+body{
+    // background:rgb(246, 218, 218);
+    background: $lightColor;
+}
 //===============
 //  user input search section
 
 // userSearch out put styling
-.userSearch-outPut-Value{
+.userSearch-outPut-Value,
+.category-title{
     margin: 1rem 0rem 0 5rem;
     text-transform: capitalize;
+}
+#error-msg{
+    text-align: center;
+    color: $primaryColor;
+    font: 1.5rem;
+    letter-spacing: 2px;
+}
+.hide{
+    display: none;
 }
 
 .user-input-search-section,
@@ -12,20 +26,21 @@
     display: flex;
     align-items: center;
 
+    
+    
     .left-btn,
     .right-btn,
     .category-left-btn,
     .category-right-btn{
         display: inline-block;
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 1rem;
-        color: $redColor;
+        color: $primaryColor;
         cursor: pointer;
-       
-
-        // &:hover{
-        //     font-size: 3.2rem;
-        // }
+        &:hover{
+            transform: scale(1.05);
+            color:$primaryDarkColor;
+        }
     }    
     .user-search-news-box,
     .categories-news-box{ 
@@ -37,23 +52,30 @@
             li{
                 height: 400px;
                 flex: 0 0 25%;
-                // border: 2px solid $redColor;
-                box-shadow: 0px 0px 7px $redColor;
+                border: 2px solid $primaryColor;
                 overflow-y: scroll;
                 display: inline-block;
                 margin: 1rem;
                 padding: 1rem;
+                background: $whiteColor;
+                border-radius: 5px;
+                 &:hover{
+                    transform: scale(1.01);
+                    border: 4px solid $primaryDarkColor;
 
+                }
+                
                 h3{
-                    color: $redColor;
+                    color: $primaryColor;
                     line-height: 1.2;
                     margin-bottom: 1rem;
                     font-size: 1rem;
                     font-family: $primaryFont;
+                    font-weight: 600;
                 }
                 div a{
                     text-decoration: none;
-                    background-color: $redColor;
+                    background-color: $primaryColor;
                     color: $whiteColor;
                     letter-spacing: 2px;
                     text-transform: uppercase;
@@ -63,8 +85,9 @@
                 }
                 p{
                     font: 1rem;
-                    font-family: $designFont;
+                    font-family: $secondaryFont;
                     letter-spacing: 1px;
+                    margin-top: 1rem;
                     
                 }
                 img{
@@ -81,33 +104,41 @@
 
 // covid-19 cases data styling here
 .covid-cases{
-    width: 55%;
+    width: 60%;
+
+    h2{
+        margin: 1rem 0rem 0 5rem;
+        text-transform: capitalize;
+    }
 }
 .covid-data{
     display: flex;
     margin-top: 2rem;
-    box-shadow: 0px 0px 7px $redColor;
+    background: $whiteColor;
+    border: 2px solid $primaryColor;
     padding: 1rem;
-    margin-left: 1rem;
+    margin-left: 3.5rem;
     .canada-header-img{
-        width: 80%;
-        h3{
-            width: 80%;
-        }
+        width: 100%;
         img{
-            width: 50%;
+            width: 80%;
             margin-top: 1rem;
         }
     }
     .covid-cases-data{
         width: 100%;
+        h5{
+            color: $primaryColor;
+        }
+
         ul li {
             margin: 0.5rem 0 0.5rem 0;
             font-weight: 700;
+            border-radius: 5px;
         }
         
         ul li span{
-            color: $redColor;
+            color: $primaryColor;
             text-align: right;
             width: 100%;
             font-weight: 500;
@@ -120,76 +151,232 @@
     display: flex;
     margin-top: 3rem;
     .covid-news{
-        display: flex;
-        width: 40%;
+        width: 35%;
         margin-left: 1rem;
         align-items: center;
 
-        .covid-left-btn,
-        .covid-right-btn{
-            font-size: 1.5rem;
-            margin: 1rem;
-            color: $redColor;
-            cursor: pointer;
-        }
         #listOfCovidNews{
             overflow-x: scroll ;
+            &:hover{
+                transform: scale(1.01);
+            }
             ul{
                 display: flex;
                 width: 100%;
 
                 li{
-                    box-shadow: 0px 0px 7px $redColor;
-                    flex: 0 0 100%;
+                    border: 2px solid $primaryColor;
+                    flex: 0 0 70%;
                     height: 400px;
                     overflow-y: scroll;
                     padding: 1rem;
                     margin: 1rem 2rem 0.5rem 0.5rem;
+                    background: $whiteColor;
+                    border-radius: 5px;
                 
                     h3{
-                    color: $redColor;
+                    color: $primaryColor;
                     line-height: 1.2;
                     margin-bottom: 1rem;
                     font-size: 1rem;
                     font-family: $primaryFont;
-                    }
-                    div a{
+                    font-weight: 600;
+                }
+                div a{
                     text-decoration: none;
-                    background-color: $redColor;
+                    background-color: $primaryColor;
                     color: $whiteColor;
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     padding: 0.5rem 0.75rem;
                     font-size: 0.75rem;  
                     cursor: pointer;              
-                    }
-                    p{
+                }
+                p{
                     font: 1rem;
-                    font-family: $designFont;
+                    font-family: $secondaryFont;
                     letter-spacing: 1px;
-                        
-                    }
-                    img{
+                    margin-top: 1rem;
+                    
+                }
+                img{
                     width: 100%;
-                    }
                 }
             }
         }
-    } 
+    }
+} 
 }
-.section-divider{
-    height: 5px;
-    width: 100%;
-    background: linear-gradient(to right ,rgba(255, 0, 0,0.9),rgba(0, 0, 0, 0.5),rgba(255, 0, 0,0.9));
+
+footer{
+    background: $primaryColor;
+    padding: 0.5rem 0;
     margin-top: 1rem;
-    background-size: 150%;
-    animation: moving 5s infinite alternate;
+    .footer-feature{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .footer-menu{
+            width: 50%;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                li a{
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 0.85rem;
+                }
+                li:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .subscribtion-section{
+            margin-right: 2rem;
+            width: 50%;
+            text-align: center;
+            p{
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 0.7rem;
+            }
+            form{
+                input[type="email"]{
+                    margin-right: 0.5rem;
+                    color:$primaryColor;
+                    margin-bottom: 0.5rem;
+                }
+                input[type="submit"]{
+                    border: 2px solid $primaryColor;
+                    color: $primaryColor;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    background-color: $whiteColor;
+                    font-size: 0.8rem;
+                    padding: 0.3rem 0.7rem;
+                }
+            }
+        }
+        
+    }
+    p{
+        text-align: center;
+        color: $whiteColor;
+        margin: 0;
+
+        a{
+            color: $whiteColor;
+            &:hover{
+                color: $whiteColor;
+            }
+        }
+    }
 }
-@keyframes moving {
-    0%{
-        background-position: left;
+// newsletter styling
+.news-letter{
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.8)),url(../TN-assets/news-1172463_960_720.webp) no-repeat center;
+    width: 30%;
+    height: 70vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    // border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px $blackColor;
+    text-align: center;
+    
+    h2{
+        // color: $primaryColor;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 3rem 0 3rem 0;
+        text-shadow:$blackColor 1px 0 3px;
+        
     }
-    100%{
-        background-position: right;
+    p{
+        // color: $primaryColor;
+        letter-spacing: 1px;
+        margin-bottom: 5rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
+    input[type="email"]{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        height: 2.5rem;
+        background: $whiteColor;
+        font-size: 1.2rem;
+        border: none;
+        box-shadow: 0 0 3px $blackColor;
+        &::placeholder {
+            color: $blackColor;
+            letter-spacing: 2px;
+        }
+    }
+    button{
+        padding: 0.3rem 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 2px solid $blackColor;
+        background: transparent;
+        color: $blackColor;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        &:hover{
+            background: $blackColor;
+            color: white;
+        }
+    }
+    .time{
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    .help{ 
+        position: fixed; 
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
+    
+}
+
+// overlay one page for subscribe page
+#overlay{
+    background-color: rgb(40, 63, 77,0.9);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+}
+#overlay.show{
+    opacity: 1;
+    pointer-events: all;
+}
+#news-letter{
+ opacity: 0;   
+}
+#news-letter.appear{
+ opacity: 1;   
 }
