@@ -5,24 +5,129 @@
         ul li {
             flex: 0 0 33%;
         }
-    
+    }
+    .covid-19-section .covid-news #listOfCovidNews {
+        ul li {
+            flex: 0 0 90%;
+        }
+    }
+    .covid-data{
+        flex-direction: column;
+        text-align: center;
     }
 }
-@media (max-width:870px) {
+@media (max-width:850px) {
+    // navbar menu
+    .navbar{
+        align-items: flex-end;
+        flex-direction: column;
+        .news-logo {
+            align-self: flex-start;
+        }
+        .navBar-menu{
+            display: block;
+            
+            .form-list{
+                flex-direction: column;
+                margin-top: 0.5rem;
+
+                input[type="text"]{
+                    margin-bottom: 0.5rem;
+                }
+                button{
+                    margin-bottom: 1.5rem;
+                    width: 200px;
+                }
+                select{
+                    width: 200px;
+                }
+            }
+        }
+        .hamburger-menu{
+            visibility: visible;
+            font-size: 1.5rem;
+            color: $whiteColor;
+            position: fixed;
+            right: 1.5rem;
+            top: 1.2rem;
+        }
+    }
+
+
+
     .user-input-search-section .user-search-news-box,
     .news-category .categories-news-box{
         ul li {
             flex: 0 0 45%;
         }
-    
     }
-}
-@media (max-width:810px) {
-    .user-input-search-section .user-search-news-box,
-    .news-category .categories-news-box{
-        ul li {
-            flex: 0 0 45%;
+    .covid-19-section{
+        flex-direction: column;
+
+        .covid-news {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+        
+            #listOfCovidNews ul{
+
+             li {
+                flex: 0 0 45%;
+                margin-top: 1rem;
+                }
+            }
+            .covid-left-btn,
+            .covid-right-btn{
+            display: inline-block;
+            }
         }
+        .covid-cases{
+            width: 80%;
+            margin: 0 auto;
+
+            .covid-data{
+                margin-left: 0;
+
+                img{
+                    width: 70%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
     
+    // 
+    .scroll-guide{
+        display: none;
+    }
+    // footer section 
+    footer .footer-feature{
+        flex-direction: column;
+
+        .footer-menu,
+        .subscribtion-section{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .subscribtion-section{
+            margin: 2rem 0;
+        }
+       
     }
 }
+
+
+
+
+
+
+// @media (max-width:810px) {
+//     .user-input-search-section .user-search-news-box,
+//     .news-category .categories-news-box{
+//         ul li {
+//             flex: 0 0 45%;
+//         }
+    
+//     }
+// }

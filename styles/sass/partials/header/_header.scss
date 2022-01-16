@@ -1,11 +1,12 @@
 // nav-bar start here
-.nav-bar{
+.navbar{
     display: flex;
     justify-content: space-between;
     width: 100%;
     background-color: $secondaryBackgroundColor;
     box-shadow: 0px 1px 5px $blackColor;
     padding: 1rem 4rem 1rem 5rem;
+    align-items: center;
 
     .news-logo h3{
         color: $whiteColor;
@@ -15,30 +16,35 @@
     }
 
     .navBar-menu{
-        form .form-tag{
+
+        form .form-list{
         display: flex;
         
         input[type="text"]{
             border: 2px solid $primaryColor;
             margin-right: 10px;
-            padding-bottom: 0.25rem;
             width: 200px;
             color: $primaryColor;
+            &::placeholder{
+                letter-spacing: 1px;
+                font-size: 0.75rem;
+            }
         }
        button{
             @include fontSize (0.75rem, 0.5, $blackColor);
             padding : 0.5rem 0.75rem;
             text-transform: uppercase;
-            color: $primaryColor;
-            border: 2px solid $primaryColor;
+            color: $whiteColor;
+            border: 2px solid $whiteColor;
             margin-right: 2rem;
-            background: $whiteColor;
+            background-color: $primaryColor;
             height: 1.7rem;
+            
             cursor: pointer;
             &:hover{
-                background-color: $primaryColor;
-                border: 2px solid $whiteColor;
-                color: $whiteColor;
+                background: $whiteColor;
+                border: 2px solid $primaryColor;
+                color: $primaryColor;
             }
         }
         select{
@@ -49,7 +55,10 @@
             letter-spacing: 2px;
             font-size: 0.85rem;
             padding: 0.2rem;
+            }
         }
     }
-}
+    .hamburger-menu{
+        visibility: hidden;
+    }
 }

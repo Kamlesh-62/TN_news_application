@@ -2,9 +2,11 @@
 // get covid data from api and print on website.
 
 const covidApp = {};
+
 covidApp.init = () => {
     covidApp.getCovidCases();
     covidApp.getCovidNews();
+    covidApp.scrollNewsSection();
 }
 
 
@@ -50,7 +52,8 @@ covidApp.getCovidNews = () => {
     url.search = new URLSearchParams({
         apiKey: 'VpaSlI0YYaZk22ge-D1h3V7o9BJAWxOC0J0AOg2fwQAqIS9L',
         language: "en",
-        keywords: "Coronavirus"
+        keywords: "Covid",
+        country: "CA"
     });
 
     fetch(url)
@@ -99,6 +102,18 @@ covidApp.printCovidNews = (arrayData) => {
     });
 
 }
+covidApp.scrollNewsSection = () => {
+    const newsWindow = document.querySelector('#listOfCovidNews');
+    const leftBtn = document.querySelector('.covid-left-btn');
+    const rightBtn = document.querySelector('.covid-right-btn');
 
+    leftBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft -= 350;
+    });
 
-// covidApp.init();
+    rightBtn.addEventListener('click', () => {
+        newsWindow.scrollLeft += 350;
+    })
+}
+
+covidApp.init();

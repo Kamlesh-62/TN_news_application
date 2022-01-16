@@ -88,13 +88,14 @@ newsApp.printUserSearchData = (arrayData) =>{
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
         
+        
         headerElement.innerHTML = listOfArray.title;
         imgElement.src = listOfArray.image;
         imgElement.alt = listOfArray.title;
         paragraphElement.innerHTML = listOfArray.description;
         anchorElement.href = listOfArray.url;
         anchorElement.innerHTML = `Read More`;
-        anchorElement.target = '_blank'; 
+        anchorElement.target = '_blank';
         
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
@@ -105,7 +106,7 @@ newsApp.printUserSearchData = (arrayData) =>{
 // Event listener for user search input and get data accordingly user's choice....
 newsApp.getUserSearch = () => {
     const form = document.querySelector('#home-form');
-    const searchOutPutValue = document.querySelector('.search-outPut');
+    const searchOutPutValue = document.querySelector('.search-output');
     form.addEventListener('submit', (event) => {
         const searchInput = document.querySelector('.search-input').value;
         newsApp.userSearchGetNews(searchInput);
@@ -113,6 +114,7 @@ newsApp.getUserSearch = () => {
         event.preventDefault();
     })    
 }
+
 // newsletter page 
 
 const newsLetterPage = document.querySelector('.news-letter');

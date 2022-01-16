@@ -41,7 +41,8 @@ body{
             transform: scale(1.05);
             color:$primaryDarkColor;
         }
-    }    
+    }
+
     .user-search-news-box,
     .categories-news-box{ 
         overflow-x: hidden;
@@ -103,17 +104,15 @@ body{
 // ==============
 
 // covid-19 cases data styling here
+.covid-heading{
+    margin: 1rem 0rem 0 5rem;
+    text-transform: capitalize;
+}
 .covid-cases{
     width: 60%;
-
-    h2{
-        margin: 1rem 0rem 0 5rem;
-        text-transform: capitalize;
-    }
 }
 .covid-data{
     display: flex;
-    margin-top: 2rem;
     background: $whiteColor;
     border: 2px solid $primaryColor;
     padding: 1rem;
@@ -127,7 +126,7 @@ body{
     }
     .covid-cases-data{
         width: 100%;
-        h5{
+        h4{
             color: $primaryColor;
         }
 
@@ -149,30 +148,48 @@ body{
 // covid-19 news data styling here
 .covid-19-section{
     display: flex;
+    align-items: center;
     margin-top: 3rem;
     .covid-news{
         width: 35%;
         margin-left: 1rem;
         align-items: center;
 
+        .covid-left-btn,
+        .covid-right-btn{
+        display: inline-block;
+        font-size: 2rem;
+        margin: 1rem;
+        color: $primaryColor;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+            color:$primaryDarkColor;
+            }
+        }
+        .covid-left-btn,
+        .covid-right-btn{
+        display: none;
+        }
+
         #listOfCovidNews{
             overflow-x: scroll ;
-            &:hover{
-                transform: scale(1.01);
-            }
             ul{
                 display: flex;
                 width: 100%;
-
+                
                 li{
                     border: 2px solid $primaryColor;
                     flex: 0 0 70%;
                     height: 400px;
                     overflow-y: scroll;
                     padding: 1rem;
-                    margin: 1rem 2rem 0.5rem 0.5rem;
+                    margin: 0rem 2rem 0.5rem 0.5rem;
                     background: $whiteColor;
                     border-radius: 5px;
+                    &:hover{
+                        transform: scale(1.01);
+                    }
                 
                     h3{
                     color: $primaryColor;
@@ -228,6 +245,7 @@ footer{
                     text-transform: uppercase;
                     letter-spacing: 1px;
                     font-size: 0.85rem;
+                    text-decoration: none;
                 }
                 li:hover{
                     transform: scale(1.05);
@@ -270,8 +288,10 @@ footer{
 
         a{
             color: $whiteColor;
+            text-decoration: none;
             &:hover{
                 color: $whiteColor;
+                text-decoration: underline;
             }
         }
     }
@@ -305,6 +325,8 @@ footer{
         margin-bottom: 5rem;
         font-size: 1.2rem;
         line-height: 1.5;
+        width: 70%;
+        margin: 2rem auto;
     }
     input[type="email"]{
         display: block;
@@ -316,7 +338,6 @@ footer{
         border: none;
         box-shadow: 0 0 3px $blackColor;
         &::placeholder {
-            color: $blackColor;
             letter-spacing: 2px;
         }
     }
@@ -375,8 +396,27 @@ footer{
     pointer-events: all;
 }
 #news-letter{
- opacity: 0;   
+ display: none;   
 }
 #news-letter.appear{
- opacity: 1;   
+ display: block;   
 }
+// .loader-main{
+//     width: 100%;
+//     height: 400px;
+// }
+// .loader {
+//   border: 8px solid #f3f3f3;
+//   border-radius: 50%;
+//   border-top: 8px solid $primaryColor;
+//   width: 50px;
+//   height: 50px;
+//   animation: spin 2s linear infinite;
+//   margin: 0 auto;
+//   ;
+
+// }
+// @keyframes spin {
+//   0% { transform: rotate(0deg); }
+//   100% { transform: rotate(360deg); }
+// }
