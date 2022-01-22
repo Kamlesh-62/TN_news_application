@@ -104,7 +104,7 @@ categoryApp.printCategoriesNews = (arrayData) => {
         
     })
 } 
-// categoryApp.getCategoryNewsData("sports");
+categoryApp.getCategoryNewsData("sports");
 
 categoryApp.selectCategories = () => {
     const formElement = document.querySelector('select');
@@ -132,4 +132,4 @@ categoryApp.scrollNewsSection = () => {
     })
 }
 
-// categoryApp.init();
+categoryApp.init();

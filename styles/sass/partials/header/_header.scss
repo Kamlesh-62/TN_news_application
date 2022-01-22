@@ -16,7 +16,6 @@
     }
 
     .navBar-menu{
-
         form .form-list{
         display: flex;
         
@@ -57,6 +56,9 @@
             padding: 0.2rem;
             }
         }
+    }
+    .navBar-menu.visiable{
+        display: block;
     }
     .hamburger-menu{
         visibility: hidden;

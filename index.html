@@ -21,7 +21,7 @@
             <div class="news-logo">
                 <h3>NEWS</h3>
             </div>
-            <div class="navBar-menu">
+            <div class="navBar-menu .visiable">
                 <form action="#" id="home-form">
                     <div class="form-list">
                         <label for="search-input" class="sr-only">Search Here</label>
@@ -54,10 +54,11 @@
                 <button class="btn submit-btn" type="submit"> Submit</button>
             </form>
             <p class="terms">Terms and Condition</p>
-            <p>Copyright © 2022 News. All rights reserved</p>
+            <!-- <p>Copyright © 2022 News. All rights reserved</p> -->
             <div><i class="fas fa-question-circle help"></i></div>
             <div><i class="fas fa-times time"></i></div>
         </section>
+
         <section class="wrapper">
             <h3 class=" userSearch-outPut-Value">"<span class="search-output">Search</span>"</h3>
             <div class="user-input-search-section">
@@ -66,11 +67,13 @@
                 </div>
                 <div class=" user-search-news-box" id="user-search-news">
                     <ul class="listOfUserSearchNews">
-
+                        <div class="loader-main">
+                            <div class="loader"> </div>
+                        </div>
                        
                     </ul>
                     <div>
-                        <p id="error-msg" class="hide"> Invalid search Try again (eg: weather, bitcoin, tesla) </p>
+                        <p id="error-msg" class="hide"> Invalid search Try again</p>
                     </div>
                 </div>
                 <div class="right-btn">

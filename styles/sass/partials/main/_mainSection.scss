@@ -299,7 +299,7 @@ footer{
 // newsletter styling
 .news-letter{
     background: #23689B;
-    width: 30%;
+    width: 50%;
     height: 70vh;
     position: fixed;
     left: 50%;
@@ -319,30 +319,34 @@ footer{
         text-shadow:$blackColor 1px 0 3px;
         color: $whiteColor;
         font-family: $primaryFont;
+        font-size: clamp(1rem,7rem,1.5rem);
         
     }
     p{
         // color: $primaryColor;
         letter-spacing: 2px;
         margin-bottom: 5rem;
-        font-size: 1.2rem;
+        font-size: clamp(0.75rem,4rem,1rem);
         line-height: 1.5;
         width: 70%;
-        margin: 2rem auto;
+        margin: 1.5rem auto;
         color: $whiteColor;
         font-family: 'Architects Daughter', cursive;
 
     }
     p.terms{
         text-decoration: underline;
+        margin-top: 3rem;
+        cursor: pointer;
+        
     }
     input[type="email"]{
         display: block;
         width: 80%;
         margin: 0 auto;
-        height: 2.5rem;
+        height: 2rem;
         background: $whiteColor;
-        font-size: 1rem;
+        font-size: clamp(0.75rem,5rem,1.2rem);
         border: none;
         border-radius: 10px;
         padding-left: 10px;
@@ -358,8 +362,8 @@ footer{
         border: 2px solid $whiteColor;
         background: transparent;
         color: $whiteColor;
-        font-size: 1.2rem;
-        margin-top: 3rem;
+        font-size: clamp(0.75rem,4rem,1rem);
+        margin-top: 1rem;
         &:hover{
             transform: scale(1.03);
         }
@@ -412,22 +416,22 @@ footer{
 #news-letter.appear{
  display: block;   
 }
-// .loader-main{
-//     width: 100%;
-//     height: 400px;
-// }
-// .loader {
-//   border: 8px solid #f3f3f3;
-//   border-radius: 50%;
-//   border-top: 8px solid $primaryColor;
-//   width: 50px;
-//   height: 50px;
-//   animation: spin 2s linear infinite;
-//   margin: 0 auto;
-//   ;
+.loader-main{
+    width: 100%;
+    height: 400px;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid $primaryColor;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  ;
 
-// }
-// @keyframes spin {
-//   0% { transform: rotate(0deg); }
-//   100% { transform: rotate(360deg); }
-// }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

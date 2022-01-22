@@ -120,4 +120,4 @@ covidApp.scrollNewsSection = () => {
     })
 }
 
-// covidApp.init();
+covidApp.init();

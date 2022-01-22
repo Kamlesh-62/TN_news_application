@@ -2,7 +2,7 @@
 const newsApp = {}; 
 
 newsApp.init = () =>{
-    newsApp.userSearchGetNews("Canada");
+    newsApp.userSearchGetNews("canada");
     newsApp.getUserSearch();
     newsApp.scrollNewsSection();
    
@@ -68,9 +68,10 @@ newsApp.userSearchGetNews = (userInput) =>{
 
 newsApp.printErrorMsg = (array) => {
     const errorMsg = document.querySelector('#error-msg');
-    console.log(array.length);
     if(array.length < 1){
         errorMsg.classList.remove('hide');
+    }else{
+        errorMsg.classList.add('hide');
     }
 }
 
@@ -122,10 +123,10 @@ const newsLetterPage = document.querySelector('.news-letter');
 const overLay = document.querySelector('#overlay');
 const closeBtn = document.querySelector('.time');
 
+// function for landing page newsletter form function
 setTimeout(() => {
     newsLetterPage.classList.add('appear');
     overLay.classList.add('show');
-    console.log('hey');
 }, 2000);
 
 newsApp.closeNewsLetterWindow = () => {
@@ -137,4 +138,13 @@ newsApp.closeNewsLetterWindow = () => {
 }
 newsApp.closeNewsLetterWindow();
 
-// newsApp.init();
+const showHamburgerMenu = () => {
+    const button = document.querySelector(".fa-bars");
+    const menu = document.querySelector(".navBar-menu")
+
+    button.addEventListener("click" ,() =>{
+        menu.classList.toggle("visiable");
+    })
+}
+showHamburgerMenu();
+newsApp.init();
