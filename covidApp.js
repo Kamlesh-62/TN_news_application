@@ -27,15 +27,16 @@ covidApp.printCountryCases = function (arrayOfData) {
     const covidCaseData = document.querySelector('.covid-cases-data');
     arrayOfData.forEach(function (listOfDataObject) {
         const ulElement = document.createElement('ul');
-        // newsApp.ulElement.classList.add("listOfCovidData");
 
-        if (listOfDataObject.Country === 'Canada') {
+        const { Country, NewConfirmed, NewDeaths, TotalDeaths, TotalConfirmed} = listOfDataObject;
+        
+        if (Country === 'Canada') {
             ulElement.innerHTML = ` 
-        <li>Country :  <span> ${listOfDataObject.Country}</span></li>
-        <li>New Confirmed Cases : <span> ${listOfDataObject.NewConfirmed}</span></li>
-        <li>New Deaths : <span> ${listOfDataObject.NewDeaths}</span></li>
-        <li>Total Deaths : <span> ${listOfDataObject.TotalDeaths}</span></li>
-        <li>Total Confirmed : <span> ${listOfDataObject.TotalConfirmed}</span></li>
+        <li>Country :  <span> ${Country}</span></li>
+        <li>New Confirmed Cases : <span> ${NewConfirmed}</span></li>
+        <li>New Deaths : <span> ${NewDeaths}</span></li>
+        <li>Total Deaths : <span> ${TotalDeaths}</span></li>
+        <li>Total Confirmed : <span> ${TotalConfirmed}</span></li>
         `;
 
             covidCaseData.append(ulElement);
@@ -81,6 +82,9 @@ covidApp.printCovidNews = (arrayData) => {
 
     arrayData.forEach((listOfArray) => {
 
+        const { title, image, description, url } = listOfArray
+
+
         const listElement = document.createElement('li');
         const headerElement = document.createElement('h3');
         const imgElement = document.createElement('img');
@@ -88,11 +92,11 @@ covidApp.printCovidNews = (arrayData) => {
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
 
-        headerElement.innerHTML = listOfArray.title;
-        imgElement.src = listOfArray.image;
-        imgElement.alt = listOfArray.title;
-        paragraphElement.innerHTML = listOfArray.description;
-        anchorElement.href = listOfArray.url;
+        headerElement.innerHTML = title;
+        imgElement.src = image;
+        imgElement.alt = title;
+        paragraphElement.innerHTML = description;
+        anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
 
@@ -116,4 +120,4 @@ covidApp.scrollNewsSection = () => {
     })
 }
 
-covidApp.init();
+// covidApp.init();

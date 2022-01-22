@@ -80,6 +80,9 @@ categoryApp.printCategoriesNews = (arrayData) => {
     const ulElement = document.querySelector('.listOfCategoriesNews');
     ulElement.innerHTML = "";
     arrayData.forEach((listOfArray) => {
+
+        const { title, image, description, url } = listOfArray
+
         const listElement = document.createElement('li');
         const headerElement = document.createElement('h3');
         const imgElement = document.createElement('img');
@@ -87,11 +90,11 @@ categoryApp.printCategoriesNews = (arrayData) => {
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
         
-        headerElement.innerHTML = listOfArray.title;
-        imgElement.src = listOfArray.image;
-        imgElement.alt = listOfArray.title;
-        paragraphElement.innerHTML = listOfArray.description;
-        anchorElement.href = listOfArray.url;
+        headerElement.innerHTML = title;
+        imgElement.src = image;
+        imgElement.alt = title;
+        paragraphElement.innerHTML = description;
+        anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
         

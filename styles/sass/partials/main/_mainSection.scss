@@ -298,7 +298,7 @@ footer{
 }
 // newsletter styling
 .news-letter{
-    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.8)),url(../TN-assets/news-1172463_960_720.webp) no-repeat center;
+    background: #23689B;
     width: 30%;
     height: 70vh;
     position: fixed;
@@ -317,16 +317,24 @@ footer{
         text-transform: uppercase;
         margin: 3rem 0 3rem 0;
         text-shadow:$blackColor 1px 0 3px;
+        color: $whiteColor;
+        font-family: $primaryFont;
         
     }
     p{
         // color: $primaryColor;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         margin-bottom: 5rem;
         font-size: 1.2rem;
         line-height: 1.5;
         width: 70%;
         margin: 2rem auto;
+        color: $whiteColor;
+        font-family: 'Architects Daughter', cursive;
+
+    }
+    p.terms{
+        text-decoration: underline;
     }
     input[type="email"]{
         display: block;
@@ -334,8 +342,10 @@ footer{
         margin: 0 auto;
         height: 2.5rem;
         background: $whiteColor;
-        font-size: 1.2rem;
+        font-size: 1rem;
         border: none;
+        border-radius: 10px;
+        padding-left: 10px;
         box-shadow: 0 0 3px $blackColor;
         &::placeholder {
             letter-spacing: 2px;
@@ -345,14 +355,13 @@ footer{
         padding: 0.3rem 0.85rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        border: 2px solid $blackColor;
+        border: 2px solid $whiteColor;
         background: transparent;
-        color: $blackColor;
+        color: $whiteColor;
         font-size: 1.2rem;
         margin-top: 3rem;
         &:hover{
-            background: $blackColor;
-            color: white;
+            transform: scale(1.03);
         }
     }
     .time{
@@ -361,6 +370,7 @@ footer{
         right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
+        color: $whiteColor;
         &:hover{
             transform: scale(1.05);
         }
@@ -371,6 +381,7 @@ footer{
         right: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
+        color: $whiteColor;
         &:hover{
             transform: scale(1.05);
         }
@@ -381,7 +392,7 @@ footer{
 
 // overlay one page for subscribe page
 #overlay{
-    background-color: rgb(40, 63, 77,0.9);
+    background-color: rgb(222, 235, 246,0.9);
     position: fixed;
     top: 0;
     bottom: 0;

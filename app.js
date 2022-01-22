@@ -74,12 +74,12 @@ newsApp.printErrorMsg = (array) => {
     }
 }
 
-
 // create function which will print data on website......
 newsApp.printUserSearchData = (arrayData) =>{
     const ulElement = document.querySelector('.listOfUserSearchNews');
     ulElement.innerHTML = "";
     arrayData.forEach((listOfArray) => {
+        const { title, image, description, url} = listOfArray
         
         const listElement = document.createElement('li');
         const headerElement = document.createElement('h3');
@@ -89,11 +89,11 @@ newsApp.printUserSearchData = (arrayData) =>{
         const anchorElement = document.createElement('a');
         
         
-        headerElement.innerHTML = listOfArray.title;
-        imgElement.src = listOfArray.image;
-        imgElement.alt = listOfArray.title;
-        paragraphElement.innerHTML = listOfArray.description;
-        anchorElement.href = listOfArray.url;
+        headerElement.innerHTML =  title;
+        imgElement.src = image;
+        imgElement.alt = title;
+        paragraphElement.innerHTML = description;
+        anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
         
@@ -102,6 +102,7 @@ newsApp.printUserSearchData = (arrayData) =>{
         listElement.append(headerElement, imgElement, paragraphElement, divElement); 
     })
 } 
+
 
 // Event listener for user search input and get data accordingly user's choice....
 newsApp.getUserSearch = () => {
