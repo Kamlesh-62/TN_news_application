@@ -5,14 +5,14 @@ newsApp.init = () =>{
     newsApp.userSearchGetNews("canada");
     newsApp.getUserSearch();
     newsApp.scrollNewsSection();
+    newsApp.closeNewsLetterWindow();
+    showHamburgerMenu();
    
 }
 
-// ================
-// global functions are here
 // create empty array, to fill data with image only and ignore data without image
-
 newsApp.filteredData = [];
+
 // create function which only return data which has a image ulr, otherwise ignore that data.
 newsApp.filterListOfArray = (arrayData) => {
     newsApp.filteredData = arrayData.filter((listOfArray) => {
@@ -35,8 +35,6 @@ newsApp.scrollNewsSection = () => {
     })
 }
 
-// ================
-// global functions are end here
 
 
 // following function for get data from API.
@@ -65,6 +63,7 @@ newsApp.userSearchGetNews = (userInput) =>{
     });
 }
 
+// error handling function
 newsApp.printErrorMsg = (array) => {
     const errorMsg = document.querySelector('#error-msg');
     if(array.length < 1){
@@ -135,7 +134,7 @@ newsApp.closeNewsLetterWindow = () => {
         overLay.classList.remove('show');
     })
 }
-newsApp.closeNewsLetterWindow();
+
 
 const showHamburgerMenu = () => {
     const button = document.querySelector(".fa-bars");
@@ -145,5 +144,5 @@ const showHamburgerMenu = () => {
         menu.classList.toggle("visiable");
     })
 }
-showHamburgerMenu();
+
 newsApp.init();

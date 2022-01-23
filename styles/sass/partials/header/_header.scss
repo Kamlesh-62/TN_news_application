@@ -23,10 +23,11 @@
             border: 2px solid $primaryColor;
             margin-right: 10px;
             width: 200px;
+            height: 1.9rem;
             color: $primaryColor;
             &::placeholder{
                 letter-spacing: 1px;
-                font-size: 0.75rem;
+                font-size: 0.9rem;
             }
         }
        button{
@@ -52,7 +53,7 @@
             text-transform: capitalize;
             letter-spacing: 2px;
             font-size: 0.85rem;
-            padding: 0.2rem;
+            padding: 0.4rem;
             }
         }
     }

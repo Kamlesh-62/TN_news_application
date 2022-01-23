@@ -43,7 +43,7 @@
 
     <!-- main section start here -->
     <main>
-        <!-- search-input-section start here -->
+        <!-- Landing page Newsletter form section -->
         <div id='overlay' ></div>
         <section class="news-letter " id="news-letter">
             <h2 class="news-letter-heading">Join our newsletter</h2>
@@ -54,13 +54,20 @@
                 <button class="btn submit-btn" type="submit"> Submit</button>
             </form>
             <p class="terms">Terms and Condition</p>
-            <!-- <p>Copyright © 2022 News. All rights reserved</p> -->
             <div><i class="fas fa-question-circle help"></i></div>
             <div><i class="fas fa-times time"></i></div>
         </section>
+        <!-- Landing page Newsletter form section -->
 
+        <!-- section divider -->
+        <div class="divider-line">
+            <h2>Top stories</h2>
+        </div>
+        <!-- section divider -->
+
+        <!-- Top stories section start here -->
         <section class="wrapper">
-            <h3 class=" userSearch-outPut-Value">"<span class="search-output">Search</span>"</h3>
+            <h3 class=" userSearch-outPut-Value"><span class="search-output">Search</span></h3>
             <div class="user-input-search-section">
                 <div class="left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
@@ -70,7 +77,7 @@
                         <div class="loader-main">
                             <div class="loader"> </div>
                         </div>
-                       
+                        
                     </ul>
                     <div>
                         <p id="error-msg" class="hide"> Invalid search Try again</p>
@@ -81,12 +88,17 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="section-divider"></div> -->
-        <!-- search-output-section end here -->
+        <!-- Top stories section end here -->
+        
+        <!-- section divider  -->
+        <div class="divider-line">
+            <h2>Category</h2>
+        </div>
+        <!-- section divider -->
 
         <!-- News-category-section start here -->
         <section class=" wrapper news-category-section" id="news-category">
-            <h3 class="category-title"> "<span class="category-output">Sports</span>" </h3>
+            <h3 class="category-title"> <span class="category-output">Sports</span></h3>
             <div class="news-category">
                 <div class="category-left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
@@ -97,7 +109,6 @@
                             <div class="loader"> </div>
                         </div>
                     </ul>
-                    <!-- all top headline will be here -->
                 </div>
                 <div class="category-right-btn">
                     <span><i class="fas fa-chevron-right"></i></span>
@@ -106,47 +117,57 @@
         </section>
         <!-- News-category-section end here -->
 
-        <!-- <div class="section-divider"></div> -->
-        <!-- covid-cases-news-section start here -->
+        <!-- covid 19 section divider -->
+        <div class="divider-line">
+            <h2>Covid-19</h2>
+        </div>
+        <!-- covid 19 section divider -->
+
+        <!-- covid-19-section start here -->
         <section class="wrapper covid-data-news-section">
             <!-- covid-19 current cases data and news will be print herer -->
-            <h3 class="covid-heading">Covid-19</h3>
+            <h3 class="covid-heading">Covid-19 Data & NEWS</h3>
             <div class="covid-19-section">
-            <article class="covid-cases">
-                <div class="covid-data">
-                    <div class="canada-header-img">
-                        <img src="./TN-assets/Flag-Canada.jpeg" alt="Canada flag">
+                <!-- covid 19 cases data section -->
+                <article class="covid-cases">
+                    <div class="covid-data">
+                        <div class="canada-header-img">
+                            <img src="./TN-assets/Flag-Canada.jpeg" alt="Canada flag">
+                        </div>
+                        <div class="covid-cases-data" id="covid-data">
+                            <h4>Canada COVID-19 Data</h4>
+                            
+                        </div>
                     </div>
-                    <div class="covid-cases-data" id="covid-data">
-                        <h4>Canada COVID-19 Data</h4>
-                        <!-- covid-19 data will be here -->
+                </article>
+                <!-- covid-cases-data-section end here -->
 
+                <!-- covid 19 news section start here -->
+                <article class="covid-news" >
+                    <div class="covid-left-btn">
+                        <span><i class="fas fa-chevron-left"></i></span>
                     </div>
-                </div>
-            </article>
-            <article class="covid-news">
-                <div class="covid-left-btn">
-                    <span><i class="fas fa-chevron-left"></i></span>
-                </div>
-                <div id="listOfCovidNews" class="covid-news-list"  >
-                    <ul class="listOfCovidNews" >
-                        
-                    </ul>
-                </div>
-                <div class="covid-right-btn">
-                    <span><i class="fas fa-chevron-right"></i></span>
-                </div>
-                <small class="scroll-guide">Scroll Right to Read more</small>
-            </article>
+                    <div id="listOfCovidNews" class="covid-news-list"  >
+                        <ul class="listOfCovidNews" >
+                            
+                        </ul>
+                    </div>
+                    <div class="covid-right-btn">
+                        <span><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <small class="scroll-guide">Scroll Right to Read more</small>
+                </article>
+                <!-- covid 19 news section end here -->
             </div>
         </section>
-        <!-- covid-cases-news-section end here -->
+        <!-- covid-19-section end here -->
     </main>
     <!-- main end here -->
 
     <!-- footer section start here -->
     <footer>
         <div class=" wrapper footer-feature">
+            <!-- footer nav bar -->
             <nav class="footer-menu">
                 <ul>
                     <li><a href="#home"> Home</a></li>
@@ -154,6 +175,8 @@
                     <li><a href="#news-category">Category</a></li>
                 </ul>
             </nav>
+
+            <!-- footer subscribtion section -->
             <div class="subscribtion-section">
                 <p>subscribe for daily news-letter
                 <p>
@@ -174,6 +197,6 @@
     <script src="./app.js"></script>
     <script src="./covidApp.js"></script>
     <script src="./categoryNewsApp.js"></script>
+    
 </body>
-
 </html>

@@ -100,51 +100,8 @@ body{
     }
 }
 
-//==============
-//  covid-19 section 
-// ==============
 
-// covid-19 cases data styling here
-.covid-heading{
-    margin: 1rem 0rem 0 5rem;
-    text-transform: capitalize;
-}
-.covid-cases{
-    width: 60%;
-}
-.covid-data{
-    display: flex;
-    background: $whiteColor;
-    border: 2px solid $primaryColor;
-    padding: 1rem;
-    margin-left: 3.5rem;
-    .canada-header-img{
-        width: 100%;
-        img{
-            width: 80%;
-            margin-top: 1rem;
-        }
-    }
-    .covid-cases-data{
-        width: 100%;
-        h4{
-            color: $primaryColor;
-        }
 
-        ul li {
-            margin: 0.5rem 0 0.5rem 0;
-            font-weight: 700;
-            border-radius: 5px;
-        }
-        
-        ul li span{
-            color: $primaryColor;
-            text-align: right;
-            width: 100%;
-            font-weight: 500;
-        }
-    }
-}
 
 // ===============
 // landing page news letter form
@@ -168,4 +125,21 @@ body{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+.divider-line h2{
+    text-transform: uppercase;
+    position: absolute;
+    // padding-left: 4rem;
+    bottom: 50%;
+    left: 5%;
+    background-color: $lightColor;
+    transform: translate(0, 50%);
+}
+.divider-line{
+    content: " ";
+    width: 100%;
+    background-color: black;
+    height: 2px;
+    position: relative;
+    margin: 2rem 0;
 }

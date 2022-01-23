@@ -149,6 +149,28 @@
     }
 }
 @media (max-width:550px) {
+    .userSearch-outPut-Value,
+    .category-title,
+    .covid-heading{
+        margin: 1rem 0rem 0 1rem;
+    }
+    .covid-19-section{
+        .covid-news{
+            .covid-left-btn,
+            .covid-right-btn{
+                display: none;
+            }
+        }
+    }
+    .user-input-search-section,
+    .news-category{
+        .left-btn,
+        .right-btn,
+        .category-left-btn,
+        .category-right-btn{
+            display: none;
+        }
+    }
     .navbar{
         align-items: center;
         .news-logo {
@@ -159,7 +181,7 @@
     .news-category .categories-news-box,
     .covid-data-news-section .covid-news .covid-news-list {
         ul li {
-            flex: 0 0 90%;
+            flex: 0 0 70%;
         }
     
     }

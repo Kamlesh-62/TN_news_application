@@ -65,7 +65,7 @@ categoryApp.getCategoryNewsData = (userChoiceCategory) => {
             });
     }
 
-    // filter data without image url
+// filter data without image url
 categoryApp.filteredData = [];
 // create function which only return data which has a image ulr, otherwise ignore that data.
 categoryApp.filterListOfArray = (arrayData) => {

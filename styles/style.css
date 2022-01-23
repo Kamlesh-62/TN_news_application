@@ -301,27 +301,28 @@ p, li, a {
   border: 2px solid #23689b;
   margin-right: 10px;
   width: 200px;
+  height: 1.9rem;
   color: #23689b;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-webkit-input-placeholder {
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-moz-placeholder {
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .navbar .navBar-menu form .form-list input[type=text]:-ms-input-placeholder {
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-ms-input-placeholder {
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .navbar .navBar-menu form .form-list input[type=text]::placeholder {
   letter-spacing: 1px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 .navbar .navBar-menu form .form-list button {
   letter-spacing: 2px;
@@ -350,7 +351,7 @@ p, li, a {
   text-transform: capitalize;
   letter-spacing: 2px;
   font-size: 0.85rem;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 .navbar .navBar-menu.visiable {
   display: block;
@@ -625,6 +626,67 @@ body {
   width: 100%;
 }
 
+.loader-main {
+  height: 400px;
+  position: relative;
+  left: 50%;
+  padding-top: 158px;
+}
+
+.loader {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #23689b;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.divider-line h2 {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 50%;
+  left: 5%;
+  background-color: #deebf6;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.divider-line {
+  content: " ";
+  width: 100%;
+  background-color: black;
+  height: 2px;
+  position: relative;
+  margin: 2rem 0;
+}
+
 .covid-heading {
   margin: 1rem 0rem 0 5rem;
   text-transform: capitalize;
@@ -668,48 +730,6 @@ body {
   font-weight: 500;
 }
 
-.loader-main {
-  height: 400px;
-  position: relative;
-  left: 50%;
-  padding-top: 158px;
-}
-
-.loader {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 8px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 8px solid #23689b;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-  margin: 0 auto;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 .covid-19-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1041,6 +1061,28 @@ footer .footer-feature .subscribtion-section {
   }
 }
 @media (max-width: 550px) {
+  .userSearch-outPut-Value,
+.category-title,
+.covid-heading {
+    margin: 1rem 0rem 0 1rem;
+  }
+
+  .covid-19-section .covid-news .covid-left-btn,
+.covid-19-section .covid-news .covid-right-btn {
+    display: none;
+  }
+
+  .user-input-search-section .left-btn,
+.user-input-search-section .right-btn,
+.user-input-search-section .category-left-btn,
+.user-input-search-section .category-right-btn,
+.news-category .left-btn,
+.news-category .right-btn,
+.news-category .category-left-btn,
+.news-category .category-right-btn {
+    display: none;
+  }
+
   .navbar {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1055,7 +1097,7 @@ footer .footer-feature .subscribtion-section {
 .news-category .categories-news-box ul li,
 .covid-data-news-section .covid-news .covid-news-list ul li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 90%;
-            flex: 0 0 90%;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
   }
 }
