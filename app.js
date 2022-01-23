@@ -54,7 +54,6 @@ newsApp.userSearchGetNews = (userInput) =>{
     
     fetch(url)
     .then((response) => {
-        // console.log(response);
         return response.json();
 
     })

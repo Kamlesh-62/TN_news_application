@@ -1,0 +1,71 @@
+footer{
+    background: $primaryColor;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    .footer-feature{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .footer-menu{
+            width: 50%;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                li a{
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 0.85rem;
+                    text-decoration: none;
+                }
+                li:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .subscribtion-section{
+            margin-right: 2rem;
+            width: 50%;
+            text-align: center;
+            p{
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 0.7rem;
+            }
+            form{
+                input[type="email"]{
+                    margin-right: 0.5rem;
+                    color:$primaryColor;
+                    margin-bottom: 0.5rem;
+                }
+                input[type="submit"]{
+                    border: 2px solid $primaryColor;
+                    color: $primaryColor;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    background-color: $whiteColor;
+                    font-size: 0.8rem;
+                    padding: 0.3rem 0.7rem;
+                }
+            }
+        }
+        
+    }
+    p{
+        text-align: center;
+        color: $whiteColor;
+        margin: 0;
+
+        a{
+            color: $whiteColor;
+            text-decoration: none;
+            &:hover{
+                color: $whiteColor;
+                text-decoration: underline;
+            }
+        }
+    }
+}

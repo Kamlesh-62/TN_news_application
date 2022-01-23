@@ -1,0 +1,82 @@
+
+// covid-19 news data styling here
+
+.covid-19-section{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    .covid-news{
+        width: 35%;
+        margin-left: 1rem;
+        align-items: center;
+
+        .covid-left-btn,
+        .covid-right-btn{
+        display: inline-block;
+        font-size: 2rem;
+        margin: 1rem;
+        color: $primaryColor;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+            color:$primaryDarkColor;
+            }
+        }
+        .covid-left-btn,
+        .covid-right-btn{
+        display: none;
+        }
+
+        .covid-news-list{
+            overflow-x: scroll ;
+            width: 100%;
+            ul{
+                display: flex;
+                width: 100%;
+                
+                li{
+                    border: 2px solid $primaryColor;
+                    flex: 0 0 70%;
+                    height: 400px;
+                    overflow-y: scroll;
+                    padding: 1rem;
+                    margin: 0rem 2rem 0.5rem 0.5rem;
+                    background: $whiteColor;
+                    border-radius: 5px;
+                    &:hover{
+                        transform: scale(1.01);
+                    }
+                
+                    h3{
+                    color: $primaryColor;
+                    line-height: 1.2;
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+                    font-family: $primaryFont;
+                    font-weight: 600;
+                }
+                div a{
+                    text-decoration: none;
+                    background-color: $primaryColor;
+                    color: $whiteColor;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 0.5rem 0.75rem;
+                    font-size: 0.75rem;  
+                    cursor: pointer;              
+                }
+                p{
+                    font: 1rem;
+                    font-family: $secondaryFont;
+                    letter-spacing: 1px;
+                    margin-top: 1rem;
+                    
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+} 
+}

@@ -22,7 +22,6 @@ categoryApp.getCategoryData = () => {
             return response.json();
         })
         .then((jsonResult) => {
-            console.log(jsonResult.categories);
             categoryApp.printCategoriesList(jsonResult.categories);
         });
 }

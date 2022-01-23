@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&family=Montserrat:ital@1&family=Open+Sans&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&family=Montserrat&family=Open+Sans&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/e06cf57877.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
@@ -21,7 +21,7 @@
             <div class="news-logo">
                 <h3>NEWS</h3>
             </div>
-            <div class="navBar-menu .visiable">
+            <div class="navBar-menu ">
                 <form action="#" id="home-form">
                     <div class="form-list">
                         <label for="search-input" class="sr-only">Search Here</label>
@@ -93,7 +93,9 @@
                 </div>
                 <div class=" categories-news-box" id="categories-news-box">
                     <ul class="listOfCategoriesNews">
-
+                        <div class="loader-main">
+                            <div class="loader"> </div>
+                        </div>
                     </ul>
                     <!-- all top headline will be here -->
                 </div>
@@ -126,8 +128,9 @@
                 <div class="covid-left-btn">
                     <span><i class="fas fa-chevron-left"></i></span>
                 </div>
-                <div id="listOfCovidNews"  >
+                <div id="listOfCovidNews" class="covid-news-list"  >
                     <ul class="listOfCovidNews" >
+                        
                     </ul>
                 </div>
                 <div class="covid-right-btn">
