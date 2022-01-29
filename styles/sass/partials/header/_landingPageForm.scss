@@ -18,17 +18,17 @@
         // color: $primaryColor;
         letter-spacing: 2px;
         text-transform: uppercase;
-        margin: 3rem 0 3rem 0;
+        margin: 3rem 0.2rem 3rem 0.2rem;
         text-shadow:$blackColor 1px 0 3px;
         color: $whiteColor;
         font-family: $primaryFont;
-        font-size: clamp(1rem,7rem,1.5rem);
+        font-size: clamp(1.2rem,2.2vw,1.5rem);
         
     }
     p{
         letter-spacing: 2px;
         margin-bottom: 5rem;
-        font-size: clamp(0.75rem,4rem,1rem);
+        font-size: clamp(0.85rem,1.7vw,1rem);
         line-height: 1.5;
         width: 70%;
         margin: 1.5rem auto;
@@ -48,7 +48,7 @@
         margin: 0 auto;
         height: 2rem;
         background: $whiteColor;
-        font-size: clamp(0.75rem,5rem,1.2rem);
+        font-size: clamp(0.85rem,1vw,1.2rem);
         border: none;
         border-radius: 10px;
         padding-left: 10px;
@@ -65,7 +65,7 @@
         border: 2px solid $whiteColor;
         background: transparent;
         color: $whiteColor;
-        font-size: clamp(0.75rem,4rem,1rem);
+        font-size: clamp(0.85rem,1vw,1rem);
         margin-top: 1rem;
         &:hover{
             transform: scale(1.03);
