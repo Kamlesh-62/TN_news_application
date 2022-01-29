@@ -86,21 +86,31 @@ newsApp.printUserSearchData = (arrayData) =>{
         const paragraphElement = document.createElement('p');
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
+
         
         
-        headerElement.innerHTML =  title;
+        headerElement.innerHTML = truncateString(title, 65);
         imgElement.src = image;
         imgElement.alt = title;
-        paragraphElement.innerHTML = description;
+        paragraphElement.innerHTML = truncateString(description, 120);
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
+
+        
+        
         
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
         listElement.append(headerElement, imgElement, paragraphElement, divElement); 
     })
 } 
+function truncateString(string,num){
+    if(string.length <= num){
+        return string
+    }
+    return string.slice(0 , num) + "..."
+}
 
 
 // Event listener for user search input and get data accordingly user's choice....

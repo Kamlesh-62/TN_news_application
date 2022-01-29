@@ -15,7 +15,8 @@
         font-family: $primaryFont;
     }
 
-    .navBar-menu{
+     .navBar-menu{
+         margin-top: 1rem;
         form .form-list{
         display: flex;
         
@@ -26,19 +27,20 @@
             height: 1.9rem;
             color: $primaryColor;
             &::placeholder{
-                letter-spacing: 1px;
                 font-size: 0.9rem;
+                text-align: center;
+                letter-spacing: 1.2px;
             }
         }
        button{
-            @include fontSize (0.75rem, 0.5, $blackColor);
-            padding : 0.5rem 0.75rem;
             text-transform: uppercase;
             color: $whiteColor;
             border: 2px solid $whiteColor;
             margin-right: 2rem;
             background-color: $primaryColor;
-            height: 1.7rem;
+            padding: 0.35rem 0.7rem;
+            letter-spacing: 1px;
+            font-size: 0.90rem;
             cursor: pointer;
             &:hover{
                 background: $whiteColor;

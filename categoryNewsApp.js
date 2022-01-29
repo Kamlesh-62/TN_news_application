@@ -33,8 +33,6 @@ categoryApp.printCategoriesList  = (arrayData) => {
         optionElement.innerHTML  = `
         <option value="${listOfCategories}" selected>${listOfCategories}</option>
         `;
-        // categoryApp.optionElement.innerHTML = listOfCategories;
-        // categoryApp.optionElement.value = listOfCategories;
 
         selectElement.append(optionElement)
 
@@ -81,6 +79,7 @@ categoryApp.printCategoriesNews = (arrayData) => {
     arrayData.forEach((listOfArray) => {
 
         const { title, image, description, url } = listOfArray
+        console.log(image)
 
         const listElement = document.createElement('li');
         const headerElement = document.createElement('h3');
@@ -89,10 +88,10 @@ categoryApp.printCategoriesNews = (arrayData) => {
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
         
-        headerElement.innerHTML = title;
+        headerElement.innerHTML = truncateString(title, 65);
         imgElement.src = image;
         imgElement.alt = title;
-        paragraphElement.innerHTML = description;
+        paragraphElement.innerHTML = truncateString(description, 120);
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
@@ -103,6 +102,14 @@ categoryApp.printCategoriesNews = (arrayData) => {
         
     })
 } 
+
+function truncateString(string, num) {
+    if (string.length <= num) {
+        return string
+    }
+    return string.slice(0, num) + "..."
+}
+
 categoryApp.getCategoryNewsData("sports");
 
 categoryApp.selectCategories = () => {

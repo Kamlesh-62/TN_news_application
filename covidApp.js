@@ -92,10 +92,10 @@ covidApp.printCovidNews = (arrayData) => {
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
 
-        headerElement.innerHTML = title;
+        headerElement.innerHTML = truncateString(title, 65);
         imgElement.src = image;
         imgElement.alt = title;
-        paragraphElement.innerHTML = description;
+        paragraphElement.innerHTML = truncateString(description, 120);
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
@@ -106,6 +106,15 @@ covidApp.printCovidNews = (arrayData) => {
     });
 
 }
+
+function truncateString(string, num) {
+    if (string.length <= num) {
+        return string
+    }
+    return string.slice(0, num) + "..."
+}
+
+
 covidApp.scrollNewsSection = () => {
     const newsWindow = document.querySelector('#listOfCovidNews');
     const leftBtn = document.querySelector('.covid-left-btn');

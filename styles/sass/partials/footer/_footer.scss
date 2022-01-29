@@ -49,10 +49,14 @@ footer{
                     background-color: $whiteColor;
                     font-size: 0.8rem;
                     padding: 0.3rem 0.7rem;
+                    &:hover{
+                        color: $whiteColor;
+                        border: 2px solid $whiteColor;
+                        background-color: $primaryColor;
+                    }   
                 }
             }
-        }
-        
+        }   
     }
     p{
         text-align: center;

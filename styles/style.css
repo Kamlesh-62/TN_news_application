@@ -292,6 +292,9 @@ p, li, a {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
 }
+.navbar .navBar-menu {
+  margin-top: 1rem;
+}
 .navbar .navBar-menu form .form-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,38 +308,39 @@ p, li, a {
   color: #23689b;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-webkit-input-placeholder {
-  letter-spacing: 1px;
   font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1.2px;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-moz-placeholder {
-  letter-spacing: 1px;
   font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1.2px;
 }
 .navbar .navBar-menu form .form-list input[type=text]:-ms-input-placeholder {
-  letter-spacing: 1px;
   font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1.2px;
 }
 .navbar .navBar-menu form .form-list input[type=text]::-ms-input-placeholder {
-  letter-spacing: 1px;
   font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1.2px;
 }
 .navbar .navBar-menu form .form-list input[type=text]::placeholder {
-  letter-spacing: 1px;
   font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1.2px;
 }
 .navbar .navBar-menu form .form-list button {
-  letter-spacing: 2px;
-  font-weight: normal;
-  font-size: 0.75rem;
-  line-height: 0.5;
-  color: #000;
-  padding: 0.5rem 0.75rem;
   text-transform: uppercase;
   color: #fff;
   border: 2px solid #fff;
   margin-right: 2rem;
   background-color: #23689b;
-  height: 1.7rem;
+  padding: 0.35rem 0.7rem;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 .navbar .navBar-menu form .form-list button:hover {
@@ -362,7 +366,7 @@ p, li, a {
 
 .news-letter {
   background: #23689B;
-  width: 50%;
+  width: 40%;
   height: 70vh;
   position: fixed;
   left: 50%;
@@ -414,18 +418,23 @@ p, li, a {
 }
 .news-letter input[type=email]::-webkit-input-placeholder {
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 .news-letter input[type=email]::-moz-placeholder {
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 .news-letter input[type=email]:-ms-input-placeholder {
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 .news-letter input[type=email]::-ms-input-placeholder {
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 .news-letter input[type=email]::placeholder {
   letter-spacing: 2px;
+  font-size: 1rem;
 }
 .news-letter button {
   padding: 0.3rem 0.85rem;
@@ -566,12 +575,11 @@ body {
 .user-input-search-section .categories-news-box ul li,
 .news-category .user-search-news-box ul li,
 .news-category .categories-news-box ul li {
-  height: 400px;
+  height: 500px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 440px;
+          flex: 0 0 440px;
   border: 2px solid #23689b;
-  overflow-y: scroll;
   display: inline-block;
   margin: 1rem;
   padding: 1rem;
@@ -593,7 +601,7 @@ body {
   color: #23689b;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: clamp(0.85rem,2vw,1rem);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -610,11 +618,19 @@ body {
   font-size: 0.75rem;
   cursor: pointer;
 }
+.user-input-search-section .user-search-news-box ul li div a:hover,
+.user-input-search-section .categories-news-box ul li div a:hover,
+.news-category .user-search-news-box ul li div a:hover,
+.news-category .categories-news-box ul li div a:hover {
+  color: #23689b;
+  border: 2px solid #23689b;
+  background-color: #fff;
+}
 .user-input-search-section .user-search-news-box ul li p,
 .user-input-search-section .categories-news-box ul li p,
 .news-category .user-search-news-box ul li p,
 .news-category .categories-news-box ul li p {
-  font: 1rem;
+  font-size: clamp(0.85rem,2vw,1rem);
   font-family: "Lato", sans-serif;
   letter-spacing: 1px;
   margin-top: 1rem;
@@ -624,6 +640,9 @@ body {
 .news-category .user-search-news-box ul li img,
 .news-category .categories-news-box ul li img {
   width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .loader-main {
@@ -765,8 +784,8 @@ body {
   display: none;
 }
 .covid-19-section .covid-news .covid-news-list {
-  overflow-x: scroll;
   width: 100%;
+  overflow-x: scroll;
 }
 .covid-19-section .covid-news .covid-news-list ul {
   display: -webkit-box;
@@ -777,10 +796,9 @@ body {
 .covid-19-section .covid-news .covid-news-list ul li {
   border: 2px solid #23689b;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
-  height: 400px;
-  overflow-y: scroll;
+      -ms-flex: 0 0 440px;
+          flex: 0 0 440px;
+  height: 500px;
   padding: 1rem;
   margin: 0rem 2rem 0.5rem 0.5rem;
   background: #fff;
@@ -794,7 +812,7 @@ body {
   color: #23689b;
   line-height: 1.2;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: clamp(0.85rem,2vw,1rem);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -808,14 +826,22 @@ body {
   font-size: 0.75rem;
   cursor: pointer;
 }
+.covid-19-section .covid-news .covid-news-list ul li div a:hover {
+  color: #23689b;
+  border: 2px solid #23689b;
+  background-color: #fff;
+}
 .covid-19-section .covid-news .covid-news-list ul li p {
-  font: 1rem;
+  font-size: clamp(0.85rem,2vw,1rem);
   font-family: "Lato", sans-serif;
   letter-spacing: 1px;
   margin-top: 1rem;
 }
 .covid-19-section .covid-news .covid-news-list ul li img {
   width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -880,6 +906,11 @@ footer .footer-feature .subscribtion-section form input[type=submit] {
   font-size: 0.8rem;
   padding: 0.3rem 0.7rem;
 }
+footer .footer-feature .subscribtion-section form input[type=submit]:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #23689b;
+}
 footer p {
   text-align: center;
   color: #fff;
@@ -899,13 +930,6 @@ footer p a:hover {
     width: 100%;
   }
 
-  .user-input-search-section .user-search-news-box ul li,
-.news-category .categories-news-box ul li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 43%;
-            flex: 0 0 43%;
-  }
-
   .covid-19-section .covid-news .covid-news-list ul li {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 90%;
@@ -922,13 +946,14 @@ footer p a:hover {
 
   .news-letter {
     width: 70%;
+    height: 60vh;
   }
 }
 @media (max-width: 850px) {
   .navbar {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -943,9 +968,7 @@ footer p a:hover {
     display: none;
   }
   .navbar .navBar-menu form .form-list {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    margin-top: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -956,10 +979,28 @@ footer p a:hover {
     margin-bottom: 1rem;
     margin-right: 0px;
   }
+  .navbar .navBar-menu form .form-list input[type=text]::-webkit-input-placeholder {
+    padding-left: 1rem;
+  }
+  .navbar .navBar-menu form .form-list input[type=text]::-moz-placeholder {
+    padding-left: 1rem;
+  }
+  .navbar .navBar-menu form .form-list input[type=text]:-ms-input-placeholder {
+    padding-left: 1rem;
+  }
+  .navbar .navBar-menu form .form-list input[type=text]::-ms-input-placeholder {
+    padding-left: 1rem;
+  }
+  .navbar .navBar-menu form .form-list input[type=text]::placeholder {
+    padding-left: 1rem;
+  }
   .navbar .navBar-menu form .form-list button {
     margin-bottom: 1.5rem;
     width: 200px;
     margin-right: 0rem;
+    padding: 0.35rem 0.7rem;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
   }
   .navbar .navBar-menu form .form-list select {
     width: 200px;
@@ -969,7 +1010,7 @@ footer p a:hover {
   }
   .navbar .news-letter {
     width: 80%;
-    height: 80vh;
+    height: 70vh;
   }
   .navbar .hamburger-menu {
     visibility: visible;
@@ -987,8 +1028,8 @@ footer p a:hover {
   .user-input-search-section .user-search-news-box ul li,
 .news-category .categories-news-box ul li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
+        -ms-flex: 0 0 400px;
+            flex: 0 0 400px;
   }
 
   .covid-19-section {
@@ -1012,8 +1053,9 @@ footer p a:hover {
   }
   .covid-19-section .covid-news .covid-news-list ul li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
+        -ms-flex: 0 0 400px;
+            flex: 0 0 400px;
+    height: 500px;
     margin-top: 1rem;
   }
   .covid-19-section .covid-news .covid-left-btn,
@@ -1056,11 +1098,16 @@ footer .footer-feature .subscribtion-section {
 .news-category .categories-news-box ul li,
 .covid-data-news-section .covid-news .covid-news-list ul li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+        -ms-flex: 0 0 350px;
+            flex: 0 0 350px;
   }
 }
 @media (max-width: 550px) {
+  .news-letter {
+    width: 80%;
+    height: 70vh;
+  }
+
   .userSearch-outPut-Value,
 .category-title,
 .covid-heading {
@@ -1097,7 +1144,12 @@ footer .footer-feature .subscribtion-section {
 .news-category .categories-news-box ul li,
 .covid-data-news-section .covid-news .covid-news-list ul li {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
+        -ms-flex: 0 0 280px;
+            flex: 0 0 280px;
+  }
+  .user-input-search-section .user-search-news-box ul li img,
+.news-category .categories-news-box ul li img,
+.covid-data-news-section .covid-news .covid-news-list ul li img {
+    height: 170px;
   }
 }
