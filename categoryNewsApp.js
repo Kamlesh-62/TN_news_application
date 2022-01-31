@@ -79,7 +79,6 @@ categoryApp.printCategoriesNews = (arrayData) => {
     arrayData.forEach((listOfArray) => {
 
         const { title, image, description, url } = listOfArray
-        console.log(image)
 
         const listElement = document.createElement('li');
         const headerElement = document.createElement('h3');
@@ -87,6 +86,7 @@ categoryApp.printCategoriesNews = (arrayData) => {
         const paragraphElement = document.createElement('p');
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
+        const dividerElement = document.createElement("div")
         
         headerElement.innerHTML = truncateString(title, 65);
         imgElement.src = image;
@@ -95,10 +95,11 @@ categoryApp.printCategoriesNews = (arrayData) => {
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
+        dividerElement.classList.add("news-topic-separater")
         
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
-        listElement.append(headerElement, imgElement, paragraphElement, divElement);
+        listElement.append(imgElement, headerElement, dividerElement, paragraphElement, divElement);
         
     })
 } 

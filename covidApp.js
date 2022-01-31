@@ -91,6 +91,7 @@ covidApp.printCovidNews = (arrayData) => {
         const paragraphElement = document.createElement('p');
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
+        const dividerElement = document.createElement("div")
 
         headerElement.innerHTML = truncateString(title, 65);
         imgElement.src = image;
@@ -99,10 +100,11 @@ covidApp.printCovidNews = (arrayData) => {
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
+        dividerElement.classList.add("news-topic-separater")
 
         newsUlElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
-        listElement.append(headerElement, imgElement, paragraphElement, divElement);
+        listElement.append(imgElement, headerElement, dividerElement, paragraphElement, divElement);
     });
 
 }

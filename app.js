@@ -86,6 +86,7 @@ newsApp.printUserSearchData = (arrayData) =>{
         const paragraphElement = document.createElement('p');
         const divElement = document.createElement('div');
         const anchorElement = document.createElement('a');
+        const dividerElement = document.createElement("div")
 
         
         
@@ -96,13 +97,11 @@ newsApp.printUserSearchData = (arrayData) =>{
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
+        dividerElement.classList.add("news-topic-separater")
 
-        
-        
-        
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
-        listElement.append(headerElement, imgElement, paragraphElement, divElement); 
+        listElement.append(imgElement, headerElement, dividerElement, paragraphElement, divElement); 
     })
 } 
 function truncateString(string,num){
