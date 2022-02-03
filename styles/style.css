@@ -265,6 +265,10 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
 p, li, a {
   font-family: "Montserrat", sans-serif;
   content: primaryColor;
@@ -576,7 +580,7 @@ body {
 .user-input-search-section .categories-news-box ul li,
 .news-category .user-search-news-box ul li,
 .news-category .categories-news-box ul li {
-  height: 510px;
+  height: 540px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 440px;
           flex: 0 0 440px;
@@ -641,7 +645,7 @@ body {
 .news-category .user-search-news-box ul li img,
 .news-category .categories-news-box ul li img {
   width: 100%;
-  height: 200px;
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 5px;
@@ -751,11 +755,11 @@ body {
 .covid-data .covid-cases-data {
   width: 100%;
 }
-.covid-data .covid-cases-data h4 {
+.covid-data .covid-cases-data h3 {
   color: #23689b;
 }
 .covid-data .covid-cases-data ul li {
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 1rem 0 1rem 0;
   font-weight: 700;
   border-radius: 5px;
 }
@@ -814,7 +818,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 440px;
           flex: 0 0 440px;
-  height: 510px;
+  height: 540px;
   margin: 0rem 2rem 0.5rem 0.5rem;
   background: #fff;
   border-radius: 5px;
@@ -842,6 +846,7 @@ body {
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
   margin-left: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 .covid-19-section .covid-news .covid-news-list ul li div a:hover {
@@ -858,7 +863,7 @@ body {
 }
 .covid-19-section .covid-news .covid-news-list ul li img {
   width: 100%;
-  height: 200px;
+  height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 5px;
@@ -872,7 +877,7 @@ body {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   background-color: black;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
 }
 
 footer {
