@@ -97,7 +97,7 @@ newsApp.printUserSearchData = (arrayData) =>{
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
-        dividerElement.classList.add("news-topic-separater")
+        dividerElement.classList.add("news-topic-separator")
 
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);
@@ -150,7 +150,7 @@ const showHamburgerMenu = () => {
     const menu = document.querySelector(".navBar-menu")
 
     button.addEventListener("click" ,() =>{
-        menu.classList.toggle("visiable");
+        menu.classList.toggle("visible");
     })
 }
 

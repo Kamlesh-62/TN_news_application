@@ -100,7 +100,7 @@ covidApp.printCovidNews = (arrayData) => {
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
-        dividerElement.classList.add("news-topic-separater")
+        dividerElement.classList.add("news-topic-separator")
 
         newsUlElement.appendChild(listElement);
         divElement.appendChild(anchorElement);

@@ -95,7 +95,7 @@ categoryApp.printCategoriesNews = (arrayData) => {
         anchorElement.href = url;
         anchorElement.innerHTML = `Read More`;
         anchorElement.target = '_blank';
-        dividerElement.classList.add("news-topic-separater")
+        dividerElement.classList.add("news-topic-separator")
         
         ulElement.appendChild(listElement);
         divElement.appendChild(anchorElement);

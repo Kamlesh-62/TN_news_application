@@ -50,7 +50,7 @@
                 }
             }
         }
-        .navBar-menu .visiable{
+        .navBar-menu .visible{
             display: block;
             
         }
@@ -75,6 +75,7 @@
         overflow-x: scroll;
         ul li {
             flex: 0 0 400px;
+            height: 490px;
         }
     }
     .covid-19-section{
@@ -91,7 +92,7 @@
                 ul{
                     li {
                         flex: 0 0 400px;
-                        height: 500px;
+                        height: 490px;
                         margin-top: 1rem;
                     }
                 }
@@ -125,11 +126,11 @@
         flex-direction: column;
 
         .footer-menu,
-        .subscribtion-section{
+        .subscription-section{
             width: 100%;
             margin: 0 auto;
         }
-        .subscribtion-section{
+        .subscription-section{
             margin: 2rem 0;
         }
        
@@ -142,6 +143,7 @@
     .covid-data-news-section .covid-news .covid-news-list {
         ul li {
             flex: 0 0 350px;
+            height: 490px;
         }
     
     }
@@ -183,7 +185,8 @@
     .news-category .categories-news-box,
     .covid-data-news-section .covid-news .covid-news-list {
         ul li {
-            flex: 0 0 280px;
+            flex: 0 0 250px;
+            height: 470px;
             img{
                 height: 170px;
             }

@@ -19,7 +19,7 @@
     .canada-header-img{
         width: 100%;
         img{
-            width: 80%;
+            width: 60%;
             margin-top: 1rem;
         }
     }
@@ -27,12 +27,14 @@
         width: 100%;
         h3{
             color: $primaryColor;
+            font-size: clamp(1rem, 2vw, 1.3rem);
         }
 
         ul li {
             margin: 1rem 0 1rem 0;
             font-weight: 700;
             border-radius: 5px;
+            font-size: clamp(0.75rem,2vw,0.9rem);
         }
         
         ul li span{
@@ -40,6 +42,7 @@
             text-align: right;
             width: 100%;
             font-weight: 500;
+            font-size: clamp(0.75rem,2vw,0.9rem);
         }
     }
 }
@@ -79,8 +82,8 @@
                 width: 100%;
                 
                 li{
-                    flex: 0 0 440px;
-                    height: 540px;
+                    flex: 0 0 430px;
+                    height: 510px;
                     margin: 0rem 2rem 0.5rem 0.5rem;
                     background: $whiteColor;
                     border-radius: 5px;
@@ -92,7 +95,7 @@
                     color: $primaryColor;
                     line-height: 1.2;
                     margin-bottom: 1rem;
-                    font-size: clamp(0.85rem,2vw,1rem);
+                    font-size: clamp(0.75rem,2vw,0.9rem);
                     font-family: $primaryFont;
                     font-weight: 600;
                     margin-left: 1rem;
@@ -116,7 +119,7 @@
                         }                
                     }
                     p{
-                        font-size: clamp(0.85rem,2vw,1rem);
+                        font-size: clamp(0.75rem,2vw,0.9rem);
                         font-family: $secondaryFont;
                         letter-spacing: 1px;
                         margin-top: 0.8rem;
@@ -130,7 +133,7 @@
                         border-top-left-radius: 5px;
                         border-top-right-radius:5px;
                     }
-                    .news-topic-separater{
+                    .news-topic-separator{
                     height: 1.5px;
                     width: 100px;
                     position: relative;
