@@ -15,8 +15,9 @@
         font-family: $primaryFont;
     }
 
-     .navBar-menu{
-         margin-top: 1rem;
+    .navBar-menu{
+        justify-self: flex-end;
+
         form .form-list{
         display: flex;
         

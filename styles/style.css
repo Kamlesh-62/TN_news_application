@@ -297,7 +297,7 @@ p, li, a {
   font-family: "Montserrat", sans-serif;
 }
 .navbar .navBar-menu {
-  margin-top: 1rem;
+  justify-self: flex-end;
 }
 .navbar .navBar-menu form .form-list {
   display: -webkit-box;
