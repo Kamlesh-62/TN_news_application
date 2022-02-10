@@ -41,7 +41,6 @@ newsApp.scrollNewsSection = () => {
 newsApp.url = 'https://api.currentsapi.services/v1/';
 
 newsApp.userSearchGetNews = (userInput) =>{
-    
     const url = new URL(`${newsApp.url}search`);
     
     url.search = new URLSearchParams({
@@ -53,14 +52,15 @@ newsApp.userSearchGetNews = (userInput) =>{
     fetch(url)
     .then((response) => {
         return response.json();
-
+        
     })
     .then((jsonResult) => {
-        // console.log(jsonResult.news);
-        newsApp.filterListOfArray(jsonResult.news)
+        newsApp.filterListOfArray(jsonResult.news);
         newsApp.printUserSearchData(newsApp.filteredData);
         newsApp.printErrorMsg (newsApp.filteredData);
-    });
+    }).catch((e) =>{
+        console.log(e)
+    })
 }
 
 // error handling function
@@ -72,6 +72,7 @@ newsApp.printErrorMsg = (array) => {
         errorMsg.classList.add('hide');
     }
 }
+
 
 // create function which will print data on website......
 newsApp.printUserSearchData = (arrayData) =>{

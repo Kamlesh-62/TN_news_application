@@ -23,12 +23,20 @@
             align-self: flex-start;
         }
         .navBar-menu{
-            display: none;
+            // display: none;
+            position: absolute;
+            height: 100vh;
+            background-color: $secondaryBackgroundColor;
+            padding: 2rem;
+            right: -2000px;
+            top: 50px;
+            z-index: 111;
+            transition: all 0.7s ease-in-out ;
             
             form .form-list{
                 margin-top: 2rem;
                 flex-direction: column;
-                margin-top: 0.5rem;
+                // margin-top: 0.5rem;
 
                 input[type="text"]{
                     margin-bottom: 1rem;
@@ -50,9 +58,8 @@
                 }
             }
         }
-        .navBar-menu .visible{
-            display: block;
-            
+        .navBar-menu.visible{
+             right: 0px;  
         }
         .news-letter{
             width: 80%;

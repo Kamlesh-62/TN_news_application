@@ -20,7 +20,9 @@ covidApp.getCovidCases = () => {
         .then((jsonResult) => {
             // console.log(jsonResult.Countries);
             covidApp.printCountryCases(jsonResult.Countries);
-        });
+        }).catch((e) => {
+            console.log(e)
+        })
 }
 
 covidApp.printCountryCases = function (arrayOfData) {
@@ -66,7 +68,9 @@ covidApp.getCovidNews = () => {
             covidApp.filterListOfArray(jsonResult.news)
             covidApp.printCovidNews(covidApp.filteredData);
 
-        });
+        }).catch((e) => {
+            console.log(e)
+        })
 }
 covidApp.filteredData = []; 
 

@@ -361,9 +361,6 @@ p, li, a {
   font-size: 0.85rem;
   padding: 0.4rem;
 }
-.navbar .navBar-menu.visible {
-  display: block;
-}
 .navbar .hamburger-menu {
   visibility: hidden;
 }
@@ -371,13 +368,13 @@ p, li, a {
 .news-letter {
   background: #23689B;
   width: 40%;
-  height: 70vh;
+  height: 50vh;
   position: fixed;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 333;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px #000;
           box-shadow: 0 0 5px #000;
@@ -486,7 +483,7 @@ p, li, a {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 222;
   opacity: 0;
   pointer-events: none;
 }
@@ -733,13 +730,17 @@ body {
 }
 
 .covid-cases {
-  width: 60%;
+  width: 40%;
 }
 
 .covid-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #fff;
   border: 2px solid #23689b;
   padding: 1rem;
@@ -747,10 +748,12 @@ body {
 }
 .covid-data .canada-header-img {
   width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .covid-data .canada-header-img img {
-  width: 60%;
-  margin-top: 1rem;
+  width: 70%;
+  margin: 1rem auto;
 }
 .covid-data .covid-cases-data {
   width: 100%;
@@ -783,7 +786,7 @@ body {
   margin-top: 3rem;
 }
 .covid-19-section .covid-news {
-  width: 35%;
+  width: 45%;
   margin-left: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -998,7 +1001,15 @@ footer p a:hover {
         align-self: flex-start;
   }
   .navbar .navBar-menu {
-    display: none;
+    position: absolute;
+    height: 100vh;
+    background-color: #23689B;
+    padding: 2rem;
+    right: -2000px;
+    top: 50px;
+    z-index: 111;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   .navbar .navBar-menu form .form-list {
     margin-top: 2rem;
@@ -1006,7 +1017,6 @@ footer p a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 0.5rem;
   }
   .navbar .navBar-menu form .form-list input[type=text] {
     margin-bottom: 1rem;
@@ -1038,8 +1048,8 @@ footer p a:hover {
   .navbar .navBar-menu form .form-list select {
     width: 200px;
   }
-  .navbar .navBar-menu .visible {
-    display: block;
+  .navbar .navBar-menu.visible {
+    right: 0px;
   }
   .navbar .news-letter {
     width: 80%;

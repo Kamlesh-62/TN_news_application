@@ -26,8 +26,6 @@ body{
     display: flex;
     align-items: center;
 
-    
-    
     .left-btn,
     .right-btn,
     .category-left-btn,
@@ -50,7 +48,7 @@ body{
         
         ul {
             display: flex;
-
+            
             li{
                 height: 510px;
                 flex: 0 0 430px;
@@ -118,9 +116,8 @@ body{
 }
 
 
-
-
 // ===============
+//loader on page
 
 .loader-main{
     height: 400px;
@@ -142,6 +139,13 @@ body{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+// .loader-main.hide{
+//     display: none;
+// }
+
+
+
+// divider ========
 .divider-line h2{
     text-transform: uppercase;
     position: absolute;
