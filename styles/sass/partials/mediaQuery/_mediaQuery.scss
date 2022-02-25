@@ -23,7 +23,6 @@
             align-self: flex-start;
         }
         .navBar-menu{
-            // display: none;
             position: absolute;
             height: 100vh;
             background-color: $secondaryBackgroundColor;
@@ -36,7 +35,6 @@
             form .form-list{
                 margin-top: 2rem;
                 flex-direction: column;
-                // margin-top: 0.5rem;
 
                 input[type="text"]{
                     margin-bottom: 1rem;
@@ -75,8 +73,7 @@
         }
     }
 
-
-
+    // top stories and category news section
     .user-input-search-section .user-search-news-box,
     .news-category .categories-news-box{
         overflow-x: scroll;
@@ -85,6 +82,7 @@
             height: 490px;
         }
     }
+    // covid section
     .covid-19-section{
         flex-direction: column;
 
@@ -124,7 +122,7 @@
         }
     }
     
-    // 
+    // scroll guide in covid new section
     .scroll-guide{
         display: none;
     }
@@ -156,15 +154,26 @@
     }
 }
 @media (max-width:550px) {
+    // navbar section
+    .navbar{
+        align-items: center;
+        .news-logo {
+            align-self: center;
+        }
+    }
+    // landing page newsletter
     .news-letter{
             width: 80%;
             height: 70vh;
         }
+    // header
     .userSearch-outPut-Value,
     .category-title,
     .covid-heading{
         margin: 1rem 0rem 0 1rem;
     }
+
+    // covid section, category and top stories
     .covid-19-section{
         .covid-news{
             .covid-left-btn,
@@ -182,12 +191,7 @@
             display: none;
         }
     }
-    .navbar{
-        align-items: center;
-        .news-logo {
-            align-self: center;
-        }
-    }
+    
     .user-input-search-section .user-search-news-box,
     .news-category .categories-news-box,
     .covid-data-news-section .covid-news .covid-news-list {
@@ -198,6 +202,5 @@
                 height: 170px;
             }
         }
-    
     }
 }
